@@ -11,6 +11,7 @@
 		D38669E71FE0865B0061A01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38669E61FE0865B0061A01B /* Assets.xcassets */; };
 		D38669EA1FE0865B0061A01B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38669E81FE0865B0061A01B /* MainMenu.xib */; };
 		D38669F61FE0865B0061A01B /* PeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38669F51FE0865B0061A01B /* PeltTests.swift */; };
+		D3866A011FE087230061A01B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A001FE087230061A01B /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		D38669F11FE0865B0061A01B /* PeltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38669F51FE0865B0061A01B /* PeltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltTests.swift; sourceTree = "<group>"; };
 		D38669F71FE0865B0061A01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3866A001FE087230061A01B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		D38669E31FE0865B0061A01B /* Pelt */ = {
 			isa = PBXGroup;
 			children = (
+				D3866A021FE087650061A01B /* Model */,
 				D38669E41FE0865B0061A01B /* AppDelegate.swift */,
 				D38669E61FE0865B0061A01B /* Assets.xcassets */,
 				D38669E81FE0865B0061A01B /* MainMenu.xib */,
@@ -90,6 +93,14 @@
 				D38669F71FE0865B0061A01B /* Info.plist */,
 			);
 			path = PeltTests;
+			sourceTree = "<group>";
+		};
+		D3866A021FE087650061A01B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3866A001FE087230061A01B /* Theme.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38669E51FE0865B0061A01B /* AppDelegate.swift in Sources */,
+				D3866A011FE087230061A01B /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
