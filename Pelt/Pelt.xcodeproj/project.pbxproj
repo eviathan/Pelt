@@ -15,7 +15,6 @@
 		D3866A051FE094B40061A01B /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A041FE094B40061A01B /* AbletonView.swift */; };
 		D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A071FE096C20061A01B /* AbletonViewController.swift */; };
 		D3866A0D1FE097130061A01B /* AbletonViewDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A0C1FE097130061A01B /* AbletonViewDelagate.swift */; };
-		D3866A0F1FE09C360061A01B /* PThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A0E1FE09C360061A01B /* PThemeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 		D3866A041FE094B40061A01B /* AbletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonView.swift; sourceTree = "<group>"; };
 		D3866A071FE096C20061A01B /* AbletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewController.swift; sourceTree = "<group>"; };
 		D3866A0C1FE097130061A01B /* AbletonViewDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewDelagate.swift; sourceTree = "<group>"; };
-		D3866A0E1FE09C360061A01B /* PThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PThemeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				D3866A0C1FE097130061A01B /* AbletonViewDelagate.swift */,
-				D3866A0E1FE09C360061A01B /* PThemeable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -245,7 +242,6 @@
 				D3866A051FE094B40061A01B /* AbletonView.swift in Sources */,
 				D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */,
 				D3866A0D1FE097130061A01B /* AbletonViewDelagate.swift in Sources */,
-				D3866A0F1FE09C360061A01B /* PThemeable.swift in Sources */,
 				D3866A011FE087230061A01B /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

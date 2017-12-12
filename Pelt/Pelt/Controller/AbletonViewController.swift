@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class AbletonViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, AbletonViewDelegate, PThemeable {
+class AbletonViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, AbletonViewDelegate {
     func convertToTheme() -> [UInt8] {
         return [UInt8]()
     }
