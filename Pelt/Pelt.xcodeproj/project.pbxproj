@@ -12,6 +12,10 @@
 		D38669EA1FE0865B0061A01B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38669E81FE0865B0061A01B /* MainMenu.xib */; };
 		D38669F61FE0865B0061A01B /* PeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38669F51FE0865B0061A01B /* PeltTests.swift */; };
 		D3866A011FE087230061A01B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A001FE087230061A01B /* Theme.swift */; };
+		D3866A051FE094B40061A01B /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A041FE094B40061A01B /* AbletonView.swift */; };
+		D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A071FE096C20061A01B /* AbletonViewController.swift */; };
+		D3866A0D1FE097130061A01B /* AbletonViewDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A0C1FE097130061A01B /* AbletonViewDelagate.swift */; };
+		D3866A0F1FE09C360061A01B /* PThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A0E1FE09C360061A01B /* PThemeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 		D38669F51FE0865B0061A01B /* PeltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltTests.swift; sourceTree = "<group>"; };
 		D38669F71FE0865B0061A01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3866A001FE087230061A01B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D3866A041FE094B40061A01B /* AbletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonView.swift; sourceTree = "<group>"; };
+		D3866A071FE096C20061A01B /* AbletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewController.swift; sourceTree = "<group>"; };
+		D3866A0C1FE097130061A01B /* AbletonViewDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewDelagate.swift; sourceTree = "<group>"; };
+		D3866A0E1FE09C360061A01B /* PThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PThemeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,9 @@
 		D38669E31FE0865B0061A01B /* Pelt */ = {
 			isa = PBXGroup;
 			children = (
+				D3866A0B1FE096DF0061A01B /* Protocols */,
+				D3866A061FE095F20061A01B /* Controller */,
+				D3866A031FE094A40061A01B /* View */,
 				D3866A021FE087650061A01B /* Model */,
 				D38669E41FE0865B0061A01B /* AppDelegate.swift */,
 				D38669E61FE0865B0061A01B /* Assets.xcassets */,
@@ -101,6 +112,31 @@
 				D3866A001FE087230061A01B /* Theme.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D3866A031FE094A40061A01B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3866A041FE094B40061A01B /* AbletonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3866A061FE095F20061A01B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3866A071FE096C20061A01B /* AbletonViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3866A0B1FE096DF0061A01B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D3866A0C1FE097130061A01B /* AbletonViewDelagate.swift */,
+				D3866A0E1FE09C360061A01B /* PThemeable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38669E51FE0865B0061A01B /* AppDelegate.swift in Sources */,
+				D3866A051FE094B40061A01B /* AbletonView.swift in Sources */,
+				D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */,
+				D3866A0D1FE097130061A01B /* AbletonViewDelagate.swift in Sources */,
+				D3866A0F1FE09C360061A01B /* PThemeable.swift in Sources */,
 				D3866A011FE087230061A01B /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

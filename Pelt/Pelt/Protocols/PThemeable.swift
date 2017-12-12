@@ -1,5 +1,5 @@
 //
-//  Theme.swift
+//  PThemeable.swift
 //  Pelt
 //
 //  Created by Brian Williams on 12/12/2017.
@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import Cocoa
 
-class Theme {
-    var mainColor: NSColor = NSColor.gray;
+protocol PThemeable {
+    func convertToTheme() -> [UInt8];
 }
