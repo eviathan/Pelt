@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Cocoa
 
-protocol AbletonViewDelegate: class {
+protocol AbletonViewDataSource: class {
     var theme: Theme { get set }
     
     func loadTheme(data: [UInt8]) -> Theme
     func generateRandomTheme() -> Theme
+    
+    func getColorsForKeys(keys: String...) -> [String : NSColor]
 }

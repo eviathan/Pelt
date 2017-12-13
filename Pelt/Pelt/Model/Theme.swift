@@ -10,5 +10,7 @@ import Foundation
 import Cocoa
 
 class Theme {
-    var mainColor: NSColor = NSColor.gray;
+    var colors: [String : NSColor] = [
+        "Wooter" : NSColor.blue
+    ]
 }

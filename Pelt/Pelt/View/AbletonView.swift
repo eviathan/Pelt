@@ -10,12 +10,12 @@ import Cocoa
 
 class AbletonView: NSView {
 
-    weak var delegate: AbletonViewDelegate?
+    weak var dataSource: AbletonViewDataSource?
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        if let theme = delegate?.theme {
+        if let theme = dataSource?.theme {
             self.layer?.sublayers = nil
             self.layer?.addSublayer(drawTheme(theme))
         }
