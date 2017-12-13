@@ -10,11 +10,31 @@ import Cocoa
 
 class AbletonView: NSView {
 
+    weak var delegate: AbletonViewDelegate?
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
-        // Drawing code here.
         
+        if let theme = delegate?.theme {
+            self.layer?.sublayers = nil
+            self.layer?.addSublayer(drawTheme(theme))
+        }
     }
     
+    private func drawTheme(_ theme: Theme) -> CALayer {
+        let layer = CALayer()
+        
+        layer.addSublayer(drawFrame(theme))
+        layer.addSublayer(drawArrangementView(theme))
+        
+        return layer
+    }
+    
+    private func drawFrame(_ theme: Theme) -> CALayer {
+        return CALayer()
+    }
+    
+    private func drawArrangementView(_ theme: Theme) -> CALayer {
+        return CALayer()
+    }
 }

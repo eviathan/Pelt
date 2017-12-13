@@ -8,17 +8,42 @@
 
 import Cocoa
 
-class AbletonViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, AbletonViewDelegate {
-    func convertToTheme() -> [UInt8] {
-        return [UInt8]()
-    }
-    
-
+class AbletonViewController: NSViewController,
+                             NSTableViewDelegate,
+                             NSTableViewDataSource,
+                             AbletonViewDelegate {
+    // Outlets
     @IBOutlet weak var abletonView: AbletonView!
     @IBOutlet weak var colorListView: NSTableView!
     
+    var theme: Theme = Theme()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        abletonView.delegate = self
+        
+        colorListView.delegate = self
+        colorListView.dataSource = self
+        
         // Do view setup here.
-    }    
+        //theme = generateRandomTheme()
+    }
+    
+    // Actions
+    @IBAction func createRandomTheme(_ sender: NSButton?) {
+        theme = generateRandomTheme()
+    }
+    
+    @IBAction func openDocument(_ sender: Any?) {
+        theme = generateRandomTheme()
+    }
+    
+    // Ableton View Delegate Methods
+    func loadTheme(data: [UInt8]) -> Theme {
+        return Theme()
+    }
+    
+    func generateRandomTheme() -> Theme {
+        return Theme()
+    }
 }
