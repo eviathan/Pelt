@@ -10,7 +10,14 @@ import Foundation
 import Cocoa
 
 class Theme {
-    var colors: [String : NSColor] = [
+    
+    let majorVersion: Int = 5
+    let minorVersion: String = "10.0_370"
+    let schemaChangeCount: Int = 1
+    let creator: String = "Pelt 1.0"
+    let revision: String = "b8761d5b3a670e00b16e716b603a7c9f50dcfcb0" // NOTE: This needs to be changed
+    
+    var skinManager: [String : NSColor] = [
         "controlForeground" : NSColor.gray,
         "textDisabled" : NSColor.gray,
         "controlDisabled" : NSColor.gray,

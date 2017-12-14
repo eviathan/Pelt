@@ -11,7 +11,10 @@ import Cocoa
 class AbletonViewController: NSViewController,
                              NSTableViewDelegate,
                              NSTableViewDataSource,
-                             AbletonViewDataSource {
+                             AbletonViewDataSource,
+                             DataModelDelegate {
+    
+    
     // Outlets
     @IBOutlet weak var abletonView: AbletonView!
     @IBOutlet weak var colorListView: NSTableView!
@@ -44,8 +47,8 @@ class AbletonViewController: NSViewController,
     func generateRandomTheme() -> Theme {
         let t = Theme()
         
-        for (name, _) in dataModel.colors {
-            t.colors[name] = NSColor.blue
+        for (name, _) in dataModel.skinManager {
+            t.skinManager[name] = NSColor.blue
         }
         
         return t
@@ -53,5 +56,9 @@ class AbletonViewController: NSViewController,
     
     func getColorsForKeys(keys: String...) -> [String : NSColor] {
         return [String:NSColor]()
+    }
+    
+    func didRecieveDataUpdate(data: [String : NSColor]) {
+        
     }
 }
