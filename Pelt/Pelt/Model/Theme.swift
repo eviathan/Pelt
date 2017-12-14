@@ -11,6 +11,18 @@ import Cocoa
 
 class Theme {
     var colors: [String : NSColor] = [
-        "Wooter" : NSColor.blue
+        "controlForeground" : NSColor.gray,
+        "textDisabled" : NSColor.gray,
+        "controlDisabled" : NSColor.gray,
+        "meterBackground" : NSColor.gray,
+        "inactiveSessionArrangerSelector" : NSColor.gray,
+        "surfaceHighlight" : NSColor.gray,
+        "surfaceArea" : NSColor.gray,
+        "desktop" : NSColor.gray,
+        "viewCheckControlEnabledOn" : NSColor.gray,
+        "externalScrollBar" : NSColor.gray,
+        "internalScrollBar" : NSColor.gray,
+        "detailViewBackground" : NSColor.gray,
+        "preferencesTab" : NSColor.gray
     ]
 }

@@ -10,8 +10,6 @@ import Foundation
 import Cocoa
 
 protocol AbletonViewDataSource: class {
-    var theme: Theme { get set }
-    
     func loadTheme(data: [UInt8]) -> Theme
     func generateRandomTheme() -> Theme
     

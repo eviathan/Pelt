@@ -25,9 +25,6 @@ class AbletonViewController: NSViewController,
         
         colorListView.delegate = self
         colorListView.dataSource = self
-        
-        // Do view setup here.
-        //theme = generateRandomTheme()
     }
     
     // Actions

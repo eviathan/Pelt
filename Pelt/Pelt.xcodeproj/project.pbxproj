@@ -15,7 +15,6 @@
 		D3866A051FE094B40061A01B /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A041FE094B40061A01B /* AbletonView.swift */; };
 		D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A071FE096C20061A01B /* AbletonViewController.swift */; };
 		D3866A0D1FE097130061A01B /* AbletonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A0C1FE097130061A01B /* AbletonViewDataSource.swift */; };
-		D3866A161FE10E830061A01B /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A151FE10E830061A01B /* ThemeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,8 @@
 		D3866A041FE094B40061A01B /* AbletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonView.swift; sourceTree = "<group>"; };
 		D3866A071FE096C20061A01B /* AbletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewController.swift; sourceTree = "<group>"; };
 		D3866A0C1FE097130061A01B /* AbletonViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewDataSource.swift; sourceTree = "<group>"; };
-		D3866A151FE10E830061A01B /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		D3CD79A71FE1D882007BDB19 /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = ../FrameWorks/SwiftSVG.framework; sourceTree = "<group>"; };
+		D3CD79A91FE1D8D5007BDB19 /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = ../Frameworks/SwiftSVG.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +69,7 @@
 				D38669E31FE0865B0061A01B /* Pelt */,
 				D38669F41FE0865B0061A01B /* PeltTests */,
 				D38669E21FE0865B0061A01B /* Products */,
+				D3CD79A61FE1D881007BDB19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,7 +85,6 @@
 		D38669E31FE0865B0061A01B /* Pelt */ = {
 			isa = PBXGroup;
 			children = (
-				D3866A141FE10E570061A01B /* Enums */,
 				D3866A0B1FE096DF0061A01B /* Protocols */,
 				D3866A061FE095F20061A01B /* Controller */,
 				D3866A031FE094A40061A01B /* View */,
@@ -139,12 +139,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D3866A141FE10E570061A01B /* Enums */ = {
+		D3CD79A61FE1D881007BDB19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3866A151FE10E830061A01B /* ThemeColor.swift */,
+				D3CD79A91FE1D8D5007BDB19 /* SwiftSVG.framework */,
+				D3CD79A71FE1D882007BDB19 /* SwiftSVG.framework */,
 			);
-			path = Enums;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +255,6 @@
 				D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */,
 				D3866A0D1FE097130061A01B /* AbletonViewDataSource.swift in Sources */,
 				D3866A011FE087230061A01B /* Theme.swift in Sources */,
-				D3866A161FE10E830061A01B /* ThemeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pelt/Pelt.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B4MRNC88BC;
@@ -406,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eviathan.Pelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -415,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pelt/Pelt.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B4MRNC88BC;
@@ -422,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eviathan.Pelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
