@@ -18,9 +18,12 @@ extension CGFloat {
 
 extension Theme {
     func serialise() -> String {
-        let colors: String = self.skinManager.map { key, value in "<\(key)><R Value=\"\(value.redComponent.convert())\" /><G Value=\"\(value.greenComponent.convert())\" /><B Value=\"\(value.blueComponent.convert())\" /><Alpha Value=\"\(value.alphaComponent.convert())\" /></\(key)>" }.joined()
         
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Ableton MajorVersion=\"\(self.majorVersion)\" MinorVersion=\"\(self.minorVersion)\" SchemaChangeCount=\"\(self.schemaChangeCount)\" Creator=\"\(self.creator)\" Revision=\"\(self.revision)\"><SkinManager>\(colors)</SkinManager></Ableton>"
+        let props: String = self.props.map { key, value in "<\(key) Value\"\(value)\">" }.joined()
+        
+        let colors: String = self.colors.map { key, value in "<\(key)><R Value=\"\(value.redComponent.convert())\" /><G Value=\"\(value.greenComponent.convert())\" /><B Value=\"\(value.blueComponent.convert())\" /><Alpha Value=\"\(value.alphaComponent.convert())\" /></\(key)>" }.joined()
+        
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Ableton MajorVersion=\"\(self.majorVersion)\" MinorVersion=\"\(self.minorVersion)\" SchemaChangeCount=\"\(self.schemaChangeCount)\" Creator=\"\(self.creator)\" Revision=\"\(self.revision)\"><SkinManager>\(props)\(colors)</SkinManager></Ableton>"
     }
 }
 extension String {

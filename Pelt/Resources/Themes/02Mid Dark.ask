@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Ableton MajorVersion="5" MinorVersion="10.0_370" SchemaChangeCount="1" Creator="Ableton Live 10.0.1d1" Revision="b8761d5b3a670e00b16e716b603a7c9f50dcfcb0">
 	<SkinManager>
+		<MinVelocityNoteBlendFactor Value="0.200000003" />
+		<StripedBackgroundShadeFactor Value="0.8999999762" />
+		<AutomationLaneHeaderAlpha Value="60" />
+		<AutomationLaneClipBodyAlpha Value="60" />
+		<DefaultBlendFactor Value="0.8000000119" />
+		<IconBlendFactor Value="0.6499999762" />
+		<ClipBlendFactor Value="0.75" />
+		<NoteBorderStandbyBlendFactor Value="0.5" />
+		<RetroDisplayBlendFactor Value="0.8999999762" />
+		<CheckControlNotCheckedBlendFactor Value="0.5" />
+		<MixSurfaceAreaBlendFactor Value="0.349999994" />
+		<TextFrameSegmentBlendFactor Value="0.6000000238" />
+		<VelocityEditorForegroundSelectedBlendFactor Value="0.6000000238" />
+		<NoteDisabledSelectedBlendFactor Value="0.5" />
+
 		<ControlForeground>
 			<R Value="238" />
 			<G Value="238" />
@@ -829,16 +844,7 @@
 			<B Value="255" />
 			<Alpha Value="64" />
 		</ViewCheckControlDisabledOff>
-		<DefaultBlendFactor Value="0.8000000119" />
-		<IconBlendFactor Value="0.6499999762" />
-		<ClipBlendFactor Value="0.75" />
-		<NoteBorderStandbyBlendFactor Value="0.5" />
-		<RetroDisplayBlendFactor Value="0.8999999762" />
-		<CheckControlNotCheckedBlendFactor Value="0.5" />
-		<MixSurfaceAreaBlendFactor Value="0.349999994" />
-		<TextFrameSegmentBlendFactor Value="0.6000000238" />
-		<VelocityEditorForegroundSelectedBlendFactor Value="0.6000000238" />
-		<NoteDisabledSelectedBlendFactor Value="0.5" />
+		
 		<BackgroundClip>
 			<R Value="92" />
 			<G Value="92" />
@@ -863,10 +869,8 @@
 			<B Value="80" />
 			<Alpha Value="255" />
 		</WarperTimeBarMarkerBackground>
-		<MinVelocityNoteBlendFactor Value="0.200000003" />
-		<StripedBackgroundShadeFactor Value="0.8999999762" />
-		<AutomationLaneHeaderAlpha Value="60" />
-		<AutomationLaneClipBodyAlpha Value="60" />
+		
+
 		<BipolarPotiTriangle>
 			<R Value="40" />
 			<G Value="40" />
@@ -915,5 +919,4 @@
 			<B Value="95" />
 			<Alpha Value="255" />
 		</TransportSelectionBackground>
-	</SkinManager>
-</Ableton>
+	

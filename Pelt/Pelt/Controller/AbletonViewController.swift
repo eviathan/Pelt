@@ -47,8 +47,8 @@ class AbletonViewController: NSViewController,
     func generateRandomTheme() -> Theme {
         let t = Theme()
         
-        for (name, _) in dataModel.skinManager {
-            t.skinManager[name] = NSColor.blue
+        for (name, _) in dataModel.colors {
+            t.colors[name] = NSColor.blue
         }
         
         return t
