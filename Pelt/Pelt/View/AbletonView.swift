@@ -15,24 +15,26 @@ class AbletonView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        self.layer?.sublayers = nil
-        self.layer?.addSublayer(drawTheme())
+//        if let theme = dataSource?.theme {
+//            self.layer?.sublayers = nil
+//            self.layer?.addSublayer(drawTheme(theme))
+//        }
     }
     
-    private func drawTheme() -> CALayer {
+    private func drawTheme(_ theme: Theme) -> CALayer {
         let layer = CALayer()
         
-        layer.addSublayer(drawFrame(dataSource?.getColorsForKeys(keys: "Thingy")))
-        layer.addSublayer(drawArrangementView(dataSource?.getColorsForKeys(keys: "Thingy")))
+        layer.addSublayer(drawFrame(theme))
+        layer.addSublayer(drawArrangementView(theme))
         
         return layer
     }
     
-    private func drawFrame(_ colors: [String : NSColor]) -> CALayer {
+    private func drawFrame(_ theme: Theme) -> CALayer {
         return CALayer()
     }
     
-    private func drawArrangementView(_ colors: [String : NSColor]) -> CALayer {
+    private func drawArrangementView(_ theme: Theme) -> CALayer {
         return CALayer()
     }
 }

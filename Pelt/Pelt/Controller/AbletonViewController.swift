@@ -16,10 +16,12 @@ class AbletonViewController: NSViewController,
     @IBOutlet weak var abletonView: AbletonView!
     @IBOutlet weak var colorListView: NSTableView!
     
-    var theme: Theme = Theme()
+    private let dataModel: Theme = Theme()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataModel.delegate = self
         
         abletonView.dataSource = self
         
@@ -29,11 +31,9 @@ class AbletonViewController: NSViewController,
     
     // Actions
     @IBAction func createRandomTheme(_ sender: NSButton?) {
-        theme = generateRandomTheme()
     }
     
     @IBAction func openDocument(_ sender: Any?) {
-        theme = generateRandomTheme()
     }
     
     // Ableton View Delegate Methods
@@ -44,7 +44,7 @@ class AbletonViewController: NSViewController,
     func generateRandomTheme() -> Theme {
         let t = Theme()
         
-        for (name, _) in theme.colors {
+        for (name, _) in dataModel.colors {
             t.colors[name] = NSColor.blue
         }
         

@@ -25,4 +25,14 @@ class Theme {
         "detailViewBackground" : NSColor.gray,
         "preferencesTab" : NSColor.gray
     ]
+    
+    weak var delegate: DataModelDelegate?
+    
+    func requestData(){
+        let data: [String : NSColor] = [String : NSColor]()
+
+        if let d = delegate {
+            d.didRecieveDataUpdate(data: data)
+        }
+    }
 }

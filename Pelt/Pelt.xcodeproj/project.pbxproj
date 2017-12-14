@@ -15,6 +15,7 @@
 		D3866A051FE094B40061A01B /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A041FE094B40061A01B /* AbletonView.swift */; };
 		D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A071FE096C20061A01B /* AbletonViewController.swift */; };
 		D3866A0D1FE097130061A01B /* AbletonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A0C1FE097130061A01B /* AbletonViewDataSource.swift */; };
+		D3CD79B01FE308C3007BDB19 /* DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD79AF1FE308C3007BDB19 /* DataModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		D3866A0C1FE097130061A01B /* AbletonViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbletonViewDataSource.swift; sourceTree = "<group>"; };
 		D3CD79A71FE1D882007BDB19 /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = ../FrameWorks/SwiftSVG.framework; sourceTree = "<group>"; };
 		D3CD79A91FE1D8D5007BDB19 /* SwiftSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSVG.framework; path = ../Frameworks/SwiftSVG.framework; sourceTree = "<group>"; };
+		D3CD79AF1FE308C3007BDB19 /* DataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D3866A0C1FE097130061A01B /* AbletonViewDataSource.swift */,
+				D3CD79AF1FE308C3007BDB19 /* DataModelDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CD79B01FE308C3007BDB19 /* DataModelDelegate.swift in Sources */,
 				D38669E51FE0865B0061A01B /* AppDelegate.swift in Sources */,
 				D3866A051FE094B40061A01B /* AbletonView.swift in Sources */,
 				D3866A091FE096C20061A01B /* AbletonViewController.swift in Sources */,
