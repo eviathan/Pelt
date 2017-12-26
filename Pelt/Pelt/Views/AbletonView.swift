@@ -15,6 +15,9 @@ class AbletonView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
+        NSColor(red: 47, green: 47, blue: 47, alpha: 1).setFill()
+        dirtyRect.fill()
+        
 //        if let theme = dataSource?.theme {
 //            self.layer?.sublayers = nil
 //            self.layer?.addSublayer(drawTheme(theme))

@@ -1,4 +1,4 @@
-//
+ //
 //  Document.swift
 //  Pelt
 //
@@ -24,6 +24,15 @@ class Document: NSPersistentDocument {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
         self.addWindowController(windowController)
+    }
+    
+    override func data(ofType typeName: String) throws -> Data {
+        if let _ = self.windowControllers[0].contentViewController as? ColorListViewController {
+            //Get the textView's String Value; or call a function that will create a string of what needs to be saved
+            return App.instance.theme.serialise().data(using: .utf8)!
+        }else {
+            throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        }
     }
 
 }

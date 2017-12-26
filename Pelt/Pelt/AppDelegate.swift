@@ -10,17 +10,17 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        // Init Persistent Store
+        NSPersistentStoreCoordinator.registerStoreClass(ASKAtomicStore.self, forStoreType: String(describing: ASKAtomicStore.self))
+        
+        // Init App
+        App.instance.poke()
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
-

@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		D321B2F41FE3347E00AC865F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F31FE3347E00AC865F /* AppDelegate.swift */; };
-		D321B2F61FE3347E00AC865F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F51FE3347E00AC865F /* ViewController.swift */; };
 		D321B2F81FE3347E00AC865F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F71FE3347E00AC865F /* Document.swift */; };
 		D321B2FB1FE3347E00AC865F /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F91FE3347E00AC865F /* Document.xcdatamodeld */; };
 		D321B2FD1FE3347E00AC865F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D321B2FC1FE3347E00AC865F /* Assets.xcassets */; };
 		D321B3001FE3347E00AC865F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D321B2FE1FE3347E00AC865F /* Main.storyboard */; };
 		D321B30C1FE3347E00AC865F /* PeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B30B1FE3347E00AC865F /* PeltTests.swift */; };
 		D321B3171FE3347E00AC865F /* PeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3161FE3347E00AC865F /* PeltUITests.swift */; };
-		D321B3261FE334B900AC865F /* AbletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3251FE334B900AC865F /* AbletonViewController.swift */; };
 		D321B32E1FE3354E00AC865F /* AbletonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */; };
 		D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */; };
 		D321B3321FE3355700AC865F /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3301FE3355700AC865F /* AbletonView.swift */; };
 		D321B3331FE3355700AC865F /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3311FE3355700AC865F /* ThemeExtensions.swift */; };
 		D321B3391FE3361300AC865F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3381FE3361300AC865F /* Theme.swift */; };
+		D321B33B1FE33B2900AC865F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B33A1FE33B2900AC865F /* App.swift */; };
+		D321B33E1FE3B5AD00AC865F /* ASKAtomicStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B33D1FE3B5AD00AC865F /* ASKAtomicStore.swift */; };
+		D36A6EB41FF0559F006016D1 /* ColorPickerTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */; };
+		D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */; };
+		D3B3EE911FE7275700456980 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE901FE7275700456980 /* Item.swift */; };
+		D3B3EE931FE727E500456980 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE921FE727E500456980 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +47,6 @@
 /* Begin PBXFileReference section */
 		D321B2F01FE3347E00AC865F /* Pelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D321B2F31FE3347E00AC865F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D321B2F51FE3347E00AC865F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D321B2F71FE3347E00AC865F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		D321B2FA1FE3347E00AC865F /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
 		D321B2FC1FE3347E00AC865F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,12 +59,17 @@
 		D321B3121FE3347E00AC865F /* PeltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D321B3161FE3347E00AC865F /* PeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltUITests.swift; sourceTree = "<group>"; };
 		D321B3181FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D321B3251FE334B900AC865F /* AbletonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonViewController.swift; sourceTree = "<group>"; };
 		D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonViewDataSource.swift; sourceTree = "<group>"; };
 		D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelDelegate.swift; sourceTree = "<group>"; };
 		D321B3301FE3355700AC865F /* AbletonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonView.swift; sourceTree = "<group>"; };
 		D321B3311FE3355700AC865F /* ThemeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeExtensions.swift; sourceTree = "<group>"; };
 		D321B3381FE3361300AC865F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D321B33A1FE33B2900AC865F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D321B33D1FE3B5AD00AC865F /* ASKAtomicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASKAtomicStore.swift; sourceTree = "<group>"; };
+		D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerTableCellView.swift; sourceTree = "<group>"; };
+		D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
+		D3B3EE901FE7275700456980 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D3B3EE921FE727E500456980 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,19 +120,21 @@
 		D321B2F21FE3347E00AC865F /* Pelt */ = {
 			isa = PBXGroup;
 			children = (
+				D3A42A6D1FF2A9C700930AFE /* Controls */,
+				D321B33C1FE3B57E00AC865F /* DataAccess */,
 				D321B3371FE3357E00AC865F /* Models */,
 				D321B3361FE3357400AC865F /* Views */,
 				D321B3351FE3356600AC865F /* Protocols */,
 				D321B3341FE3355C00AC865F /* Extensions */,
 				D321B32A1FE334F600AC865F /* Controllers */,
 				D321B2F31FE3347E00AC865F /* AppDelegate.swift */,
-				D321B2F51FE3347E00AC865F /* ViewController.swift */,
 				D321B2F71FE3347E00AC865F /* Document.swift */,
 				D321B2FC1FE3347E00AC865F /* Assets.xcassets */,
 				D321B2FE1FE3347E00AC865F /* Main.storyboard */,
 				D321B3011FE3347E00AC865F /* Info.plist */,
 				D321B3021FE3347E00AC865F /* Pelt.entitlements */,
 				D321B2F91FE3347E00AC865F /* Document.xcdatamodeld */,
+				D321B33A1FE33B2900AC865F /* App.swift */,
 			);
 			path = Pelt;
 			sourceTree = "<group>";
@@ -150,7 +160,7 @@
 		D321B32A1FE334F600AC865F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D321B3251FE334B900AC865F /* AbletonViewController.swift */,
+				D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D321B3301FE3355700AC865F /* AbletonView.swift */,
+				D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,8 +195,25 @@
 			isa = PBXGroup;
 			children = (
 				D321B3381FE3361300AC865F /* Theme.swift */,
+				D3B3EE901FE7275700456980 /* Item.swift */,
+				D3B3EE921FE727E500456980 /* Color.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D321B33C1FE3B57E00AC865F /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				D321B33D1FE3B5AD00AC865F /* ASKAtomicStore.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		D3A42A6D1FF2A9C700930AFE /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,16 +349,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D321B3261FE334B900AC865F /* AbletonViewController.swift in Sources */,
 				D321B2FB1FE3347E00AC865F /* Document.xcdatamodeld in Sources */,
+				D321B33B1FE33B2900AC865F /* App.swift in Sources */,
 				D321B3331FE3355700AC865F /* ThemeExtensions.swift in Sources */,
+				D3B3EE931FE727E500456980 /* Color.swift in Sources */,
+				D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */,
+				D36A6EB41FF0559F006016D1 /* ColorPickerTableCellView.swift in Sources */,
 				D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */,
-				D321B2F61FE3347E00AC865F /* ViewController.swift in Sources */,
+				D3B3EE911FE7275700456980 /* Item.swift in Sources */,
 				D321B3321FE3355700AC865F /* AbletonView.swift in Sources */,
 				D321B32E1FE3354E00AC865F /* AbletonViewDataSource.swift in Sources */,
 				D321B3391FE3361300AC865F /* Theme.swift in Sources */,
 				D321B2F41FE3347E00AC865F /* AppDelegate.swift in Sources */,
 				D321B2F81FE3347E00AC865F /* Document.swift in Sources */,
+				D321B33E1FE3B5AD00AC865F /* ASKAtomicStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
