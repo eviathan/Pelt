@@ -9,5 +9,11 @@
 import Foundation
 
 class Item {
-    var value: String = "0"
+    var value: Double = 0.0
+    
+    init() { }
+    
+    init(_ value: Double) {
+        self.value = value
+    }
 }
