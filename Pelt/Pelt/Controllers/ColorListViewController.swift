@@ -8,47 +8,40 @@
 
 import Cocoa
 
-class ColorListViewController: NSViewController,
-                             NSTableViewDelegate,
-                             NSTableViewDataSource,
-                             AbletonViewDataSource,
-                             DataModelDelegate {
-    
+class ColorListViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, DataModelDelegate {
     
     // Outlets
-    @IBOutlet weak var abletonView: AbletonView!
     @IBOutlet weak var colorListView: NSTableView!
     
     private let dataModel: Theme = Theme()
     private var selectedRow: Int = 0
     
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
-    }
+//    override var representedObject: Any? {
+//        didSet {
+//            // Update the view, if already loaded.
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataModel.delegate = self
-        abletonView.dataSource = self
+//        abletonView.dataSource = self
         colorListView.delegate = self
         colorListView.dataSource = self
     }
     
     // Actions
-    @IBAction func createRandomTheme(_ sender: NSButton?) {
-    }
-    
-    @IBAction func openDocument(_ sender: Any?) {
-    }
-    
     @IBAction func colorDidChange(_ sender: NSColorWell) {
         let row = colorListView.row(for: sender as NSView)
         let colorKey = Array(App.instance.theme.colors.keys)[row]
         App.instance.theme.colors[colorKey] = sender.color
         colorListView.reloadData()
+    }
+    
+    // DataModelDelegate Methods
+    func didRecieveDataUpdate(theme: Theme) {
+        // TODO: IMPLEMENT THIS!
     }
     
     // Color List Delegate & DataSource Methods
@@ -102,25 +95,21 @@ class ColorListViewController: NSViewController,
     }
     
     // Ableton View Delegate Methods
-    func loadTheme(data: [UInt8]) -> Theme {
-        return Theme()
-    }
-    
-    func generateRandomTheme() -> Theme {
-        let t = Theme()
-        
-        for (name, _) in dataModel.colors {
-            t.colors[name] = NSColor.blue
-        }
-        
-        return t
-    }
-    
-    func getColorsForKeys(keys: String...) -> [String : NSColor] {
-        return [String:NSColor]()
-    }
-    
-    func didRecieveDataUpdate(data: [String : NSColor]) {
-        
-    }
+//    func loadTheme(data: [UInt8]) -> Theme {
+//        return Theme()
+//    }
+//
+//    func generateRandomTheme() -> Theme {
+//        let t = Theme()
+//
+//        for (name, _) in dataModel.colors {
+//            t.colors[name] = NSColor.blue
+//        }
+//
+//        return t
+//    }
+//
+//    func getColorsForKeys(keys: String...) -> [String : NSColor] {
+//        return [String:NSColor]()
+//    }
 }

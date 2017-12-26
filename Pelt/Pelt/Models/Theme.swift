@@ -11,6 +11,8 @@ import Cocoa
 
 class Theme {
     
+    weak var delegate: DataModelDelegate?
+    
     var selectedKey: String = ""
     
     let majorVersion: Int = 5
@@ -189,13 +191,10 @@ class Theme {
         "TransportSelectionBackground" : NSColor.white
     ]
     
-    weak var delegate: DataModelDelegate?
-    
     func requestData(){
-        let data: [String : NSColor] = [String : NSColor]()
-
+        // TODO: Initial load of theme
         if let d = delegate {
-            d.didRecieveDataUpdate(data: data)
+            d.didRecieveDataUpdate(theme: self)
         }
     }
 }

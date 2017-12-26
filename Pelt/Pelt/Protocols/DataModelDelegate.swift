@@ -10,5 +10,5 @@ import Foundation
 import Cocoa
 
 protocol DataModelDelegate: class {
-    func didRecieveDataUpdate(data: [String : NSColor])
+    func didRecieveDataUpdate(theme: Theme)
 }

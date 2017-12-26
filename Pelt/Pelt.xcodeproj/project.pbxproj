@@ -23,6 +23,7 @@
 		D321B33E1FE3B5AD00AC865F /* ASKAtomicStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B33D1FE3B5AD00AC865F /* ASKAtomicStore.swift */; };
 		D36A6EB41FF0559F006016D1 /* ColorPickerTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */; };
 		D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */; };
+		D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */; };
 		D3B3EE911FE7275700456980 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE901FE7275700456980 /* Item.swift */; };
 		D3B3EE931FE727E500456980 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE921FE727E500456980 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		D321B33D1FE3B5AD00AC865F /* ASKAtomicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASKAtomicStore.swift; sourceTree = "<group>"; };
 		D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerTableCellView.swift; sourceTree = "<group>"; };
 		D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
+		D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
 		D3B3EE901FE7275700456980 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D3B3EE921FE727E500456980 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +122,6 @@
 		D321B2F21FE3347E00AC865F /* Pelt */ = {
 			isa = PBXGroup;
 			children = (
-				D3A42A6D1FF2A9C700930AFE /* Controls */,
 				D321B33C1FE3B57E00AC865F /* DataAccess */,
 				D321B3371FE3357E00AC865F /* Models */,
 				D321B3361FE3357400AC865F /* Views */,
@@ -161,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */,
+				D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,13 +209,6 @@
 				D321B33D1FE3B5AD00AC865F /* ASKAtomicStore.swift */,
 			);
 			path = DataAccess;
-			sourceTree = "<group>";
-		};
-		D3A42A6D1FF2A9C700930AFE /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +349,7 @@
 				D321B3331FE3355700AC865F /* ThemeExtensions.swift in Sources */,
 				D3B3EE931FE727E500456980 /* Color.swift in Sources */,
 				D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */,
+				D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */,
 				D36A6EB41FF0559F006016D1 /* ColorPickerTableCellView.swift in Sources */,
 				D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */,
 				D3B3EE911FE7275700456980 /* Item.swift in Sources */,
