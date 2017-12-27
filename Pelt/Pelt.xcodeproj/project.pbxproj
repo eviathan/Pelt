@@ -7,45 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D38669E51FE0865B0061A01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38669E41FE0865B0061A01B /* AppDelegate.swift */; };
-		D38669E71FE0865B0061A01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38669E61FE0865B0061A01B /* Assets.xcassets */; };
-		D38669EA1FE0865B0061A01B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38669E81FE0865B0061A01B /* MainMenu.xib */; };
-		D38669F61FE0865B0061A01B /* PeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38669F51FE0865B0061A01B /* PeltTests.swift */; };
-		D3866A011FE087230061A01B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866A001FE087230061A01B /* Theme.swift */; };
+		D321B2F41FE3347E00AC865F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F31FE3347E00AC865F /* AppDelegate.swift */; };
+		D321B2F81FE3347E00AC865F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F71FE3347E00AC865F /* Document.swift */; };
+		D321B2FB1FE3347E00AC865F /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F91FE3347E00AC865F /* Document.xcdatamodeld */; };
+		D321B2FD1FE3347E00AC865F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D321B2FC1FE3347E00AC865F /* Assets.xcassets */; };
+		D321B3001FE3347E00AC865F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D321B2FE1FE3347E00AC865F /* Main.storyboard */; };
+		D321B30C1FE3347E00AC865F /* PeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B30B1FE3347E00AC865F /* PeltTests.swift */; };
+		D321B3171FE3347E00AC865F /* PeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3161FE3347E00AC865F /* PeltUITests.swift */; };
+		D321B32E1FE3354E00AC865F /* AbletonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */; };
+		D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */; };
+		D321B3321FE3355700AC865F /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3301FE3355700AC865F /* AbletonView.swift */; };
+		D321B3331FE3355700AC865F /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3311FE3355700AC865F /* ThemeExtensions.swift */; };
+		D321B3391FE3361300AC865F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3381FE3361300AC865F /* Theme.swift */; };
+		D321B33B1FE33B2900AC865F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B33A1FE33B2900AC865F /* App.swift */; };
+		D36A6EB41FF0559F006016D1 /* PropertyPickerTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */; };
+		D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */; };
+		D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */; };
+		D3B1EF3C1FF319EA00178D83 /* PropertyPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */; };
+		D3B1EF3E1FF334EB00178D83 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */; };
+		D3B3EE911FE7275700456980 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE901FE7275700456980 /* Item.swift */; };
+		D3B3EE931FE727E500456980 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE921FE727E500456980 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D38669F21FE0865B0061A01B /* PBXContainerItemProxy */ = {
+		D321B3081FE3347E00AC865F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D38669D91FE0865B0061A01B /* Project object */;
+			containerPortal = D321B2E81FE3347E00AC865F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D38669E01FE0865B0061A01B;
+			remoteGlobalIDString = D321B2EF1FE3347E00AC865F;
+			remoteInfo = Pelt;
+		};
+		D321B3131FE3347E00AC865F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D321B2E81FE3347E00AC865F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D321B2EF1FE3347E00AC865F;
 			remoteInfo = Pelt;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D38669E11FE0865B0061A01B /* Pelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D38669E41FE0865B0061A01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D38669E61FE0865B0061A01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D38669E91FE0865B0061A01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D38669EB1FE0865B0061A01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D38669EC1FE0865B0061A01B /* Pelt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pelt.entitlements; sourceTree = "<group>"; };
-		D38669F11FE0865B0061A01B /* PeltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D38669F51FE0865B0061A01B /* PeltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltTests.swift; sourceTree = "<group>"; };
-		D38669F71FE0865B0061A01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3866A001FE087230061A01B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D321B2F01FE3347E00AC865F /* Pelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D321B2F31FE3347E00AC865F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D321B2F71FE3347E00AC865F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		D321B2FA1FE3347E00AC865F /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+		D321B2FC1FE3347E00AC865F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D321B2FF1FE3347E00AC865F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D321B3011FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D321B3021FE3347E00AC865F /* Pelt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pelt.entitlements; sourceTree = "<group>"; };
+		D321B3071FE3347E00AC865F /* PeltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D321B30B1FE3347E00AC865F /* PeltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltTests.swift; sourceTree = "<group>"; };
+		D321B30D1FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D321B3121FE3347E00AC865F /* PeltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D321B3161FE3347E00AC865F /* PeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltUITests.swift; sourceTree = "<group>"; };
+		D321B3181FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonViewDataSource.swift; sourceTree = "<group>"; };
+		D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelDelegate.swift; sourceTree = "<group>"; };
+		D321B3301FE3355700AC865F /* AbletonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonView.swift; sourceTree = "<group>"; };
+		D321B3311FE3355700AC865F /* ThemeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeExtensions.swift; sourceTree = "<group>"; };
+		D321B3381FE3361300AC865F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D321B33A1FE33B2900AC865F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyPickerTableCellView.swift; sourceTree = "<group>"; };
+		D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
+		D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
+		D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyPickerTableViewCell.swift; sourceTree = "<group>"; };
+		D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
+		D3B3EE901FE7275700456980 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D3B3EE921FE727E500456980 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D38669DE1FE0865B0061A01B /* Frameworks */ = {
+		D321B2ED1FE3347E00AC865F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D38669EE1FE0865B0061A01B /* Frameworks */ = {
+		D321B3041FE3347E00AC865F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D321B30F1FE3347E00AC865F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,64 +101,122 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D38669D81FE0865B0061A01B = {
+		D321B2E71FE3347E00AC865F = {
 			isa = PBXGroup;
 			children = (
-				D38669E31FE0865B0061A01B /* Pelt */,
-				D38669F41FE0865B0061A01B /* PeltTests */,
-				D38669E21FE0865B0061A01B /* Products */,
+				D321B2F21FE3347E00AC865F /* Pelt */,
+				D321B30A1FE3347E00AC865F /* PeltTests */,
+				D321B3151FE3347E00AC865F /* PeltUITests */,
+				D321B2F11FE3347E00AC865F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D38669E21FE0865B0061A01B /* Products */ = {
+		D321B2F11FE3347E00AC865F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D38669E11FE0865B0061A01B /* Pelt.app */,
-				D38669F11FE0865B0061A01B /* PeltTests.xctest */,
+				D321B2F01FE3347E00AC865F /* Pelt.app */,
+				D321B3071FE3347E00AC865F /* PeltTests.xctest */,
+				D321B3121FE3347E00AC865F /* PeltUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D38669E31FE0865B0061A01B /* Pelt */ = {
+		D321B2F21FE3347E00AC865F /* Pelt */ = {
 			isa = PBXGroup;
 			children = (
-				D3866A021FE087650061A01B /* Model */,
-				D38669E41FE0865B0061A01B /* AppDelegate.swift */,
-				D38669E61FE0865B0061A01B /* Assets.xcassets */,
-				D38669E81FE0865B0061A01B /* MainMenu.xib */,
-				D38669EB1FE0865B0061A01B /* Info.plist */,
-				D38669EC1FE0865B0061A01B /* Pelt.entitlements */,
+				D321B3371FE3357E00AC865F /* Models */,
+				D321B3361FE3357400AC865F /* Views */,
+				D321B3351FE3356600AC865F /* Protocols */,
+				D321B3341FE3355C00AC865F /* Extensions */,
+				D321B32A1FE334F600AC865F /* Controllers */,
+				D321B2F31FE3347E00AC865F /* AppDelegate.swift */,
+				D321B2F71FE3347E00AC865F /* Document.swift */,
+				D321B2FC1FE3347E00AC865F /* Assets.xcassets */,
+				D321B2FE1FE3347E00AC865F /* Main.storyboard */,
+				D321B3011FE3347E00AC865F /* Info.plist */,
+				D321B3021FE3347E00AC865F /* Pelt.entitlements */,
+				D321B2F91FE3347E00AC865F /* Document.xcdatamodeld */,
+				D321B33A1FE33B2900AC865F /* App.swift */,
 			);
 			path = Pelt;
 			sourceTree = "<group>";
 		};
-		D38669F41FE0865B0061A01B /* PeltTests */ = {
+		D321B30A1FE3347E00AC865F /* PeltTests */ = {
 			isa = PBXGroup;
 			children = (
-				D38669F51FE0865B0061A01B /* PeltTests.swift */,
-				D38669F71FE0865B0061A01B /* Info.plist */,
+				D321B30B1FE3347E00AC865F /* PeltTests.swift */,
+				D321B30D1FE3347E00AC865F /* Info.plist */,
 			);
 			path = PeltTests;
 			sourceTree = "<group>";
 		};
-		D3866A021FE087650061A01B /* Model */ = {
+
+		D321B3151FE3347E00AC865F /* PeltUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D3866A001FE087230061A01B /* Theme.swift */,
+				D321B3161FE3347E00AC865F /* PeltUITests.swift */,
+				D321B3181FE3347E00AC865F /* Info.plist */,
 			);
-			path = Model;
+			path = PeltUITests;
+			sourceTree = "<group>";
+		};
+		D321B32A1FE334F600AC865F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */,
+				D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D321B3341FE3355C00AC865F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D321B3311FE3355700AC865F /* ThemeExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D321B3351FE3356600AC865F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */,
+				D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D321B3361FE3357400AC865F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */,
+				D321B3301FE3355700AC865F /* AbletonView.swift */,
+				D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */,
+				D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D321B3371FE3357E00AC865F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D321B3381FE3361300AC865F /* Theme.swift */,
+				D3B3EE901FE7275700456980 /* Item.swift */,
+				D3B3EE921FE727E500456980 /* Color.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D38669E01FE0865B0061A01B /* Pelt */ = {
+		D321B2EF1FE3347E00AC865F /* Pelt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D38669FA1FE0865B0061A01B /* Build configuration list for PBXNativeTarget "Pelt" */;
+			buildConfigurationList = D321B31B1FE3347E00AC865F /* Build configuration list for PBXNativeTarget "Pelt" */;
 			buildPhases = (
-				D38669DD1FE0865B0061A01B /* Sources */,
-				D38669DE1FE0865B0061A01B /* Frameworks */,
-				D38669DF1FE0865B0061A01B /* Resources */,
+				D321B2EC1FE3347E00AC865F /* Sources */,
+				D321B2ED1FE3347E00AC865F /* Frameworks */,
+				D321B2EE1FE3347E00AC865F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -120,49 +224,72 @@
 			);
 			name = Pelt;
 			productName = Pelt;
-			productReference = D38669E11FE0865B0061A01B /* Pelt.app */;
+			productReference = D321B2F01FE3347E00AC865F /* Pelt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D38669F01FE0865B0061A01B /* PeltTests */ = {
+		D321B3061FE3347E00AC865F /* PeltTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D38669FD1FE0865B0061A01B /* Build configuration list for PBXNativeTarget "PeltTests" */;
+			buildConfigurationList = D321B31E1FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltTests" */;
 			buildPhases = (
-				D38669ED1FE0865B0061A01B /* Sources */,
-				D38669EE1FE0865B0061A01B /* Frameworks */,
-				D38669EF1FE0865B0061A01B /* Resources */,
+				D321B3031FE3347E00AC865F /* Sources */,
+				D321B3041FE3347E00AC865F /* Frameworks */,
+				D321B3051FE3347E00AC865F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D38669F31FE0865B0061A01B /* PBXTargetDependency */,
+				D321B3091FE3347E00AC865F /* PBXTargetDependency */,
 			);
 			name = PeltTests;
 			productName = PeltTests;
-			productReference = D38669F11FE0865B0061A01B /* PeltTests.xctest */;
+			productReference = D321B3071FE3347E00AC865F /* PeltTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D321B3111FE3347E00AC865F /* PeltUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D321B3211FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltUITests" */;
+			buildPhases = (
+				D321B30E1FE3347E00AC865F /* Sources */,
+				D321B30F1FE3347E00AC865F /* Frameworks */,
+				D321B3101FE3347E00AC865F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D321B3141FE3347E00AC865F /* PBXTargetDependency */,
+			);
+			name = PeltUITests;
+			productName = PeltUITests;
+			productReference = D321B3121FE3347E00AC865F /* PeltUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D38669D91FE0865B0061A01B /* Project object */ = {
+		D321B2E81FE3347E00AC865F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Brian Williams";
 				TargetAttributes = {
-					D38669E01FE0865B0061A01B = {
+					D321B2EF1FE3347E00AC865F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					D38669F01FE0865B0061A01B = {
+					D321B3061FE3347E00AC865F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D38669E01FE0865B0061A01B;
+						TestTargetID = D321B2EF1FE3347E00AC865F;
+					};
+					D321B3111FE3347E00AC865F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D321B2EF1FE3347E00AC865F;
 					};
 				};
 			};
-			buildConfigurationList = D38669DC1FE0865B0061A01B /* Build configuration list for PBXProject "Pelt" */;
+			buildConfigurationList = D321B2EB1FE3347E00AC865F /* Build configuration list for PBXProject "Pelt" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,28 +297,36 @@
 				en,
 				Base,
 			);
-			mainGroup = D38669D81FE0865B0061A01B;
-			productRefGroup = D38669E21FE0865B0061A01B /* Products */;
+			mainGroup = D321B2E71FE3347E00AC865F;
+			productRefGroup = D321B2F11FE3347E00AC865F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D38669E01FE0865B0061A01B /* Pelt */,
-				D38669F01FE0865B0061A01B /* PeltTests */,
+				D321B2EF1FE3347E00AC865F /* Pelt */,
+				D321B3061FE3347E00AC865F /* PeltTests */,
+				D321B3111FE3347E00AC865F /* PeltUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D38669DF1FE0865B0061A01B /* Resources */ = {
+		D321B2EE1FE3347E00AC865F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38669E71FE0865B0061A01B /* Assets.xcassets in Resources */,
-				D38669EA1FE0865B0061A01B /* MainMenu.xib in Resources */,
+				D321B2FD1FE3347E00AC865F /* Assets.xcassets in Resources */,
+				D321B3001FE3347E00AC865F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D38669EF1FE0865B0061A01B /* Resources */ = {
+		D321B3051FE3347E00AC865F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D321B3101FE3347E00AC865F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,46 +336,73 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D38669DD1FE0865B0061A01B /* Sources */ = {
+		D321B2EC1FE3347E00AC865F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38669E51FE0865B0061A01B /* AppDelegate.swift in Sources */,
-				D3866A011FE087230061A01B /* Theme.swift in Sources */,
+				D321B2FB1FE3347E00AC865F /* Document.xcdatamodeld in Sources */,
+				D321B33B1FE33B2900AC865F /* App.swift in Sources */,
+				D321B3331FE3355700AC865F /* ThemeExtensions.swift in Sources */,
+				D3B3EE931FE727E500456980 /* Color.swift in Sources */,
+				D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */,
+				D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */,
+				D3B1EF3C1FF319EA00178D83 /* PropertyPickerTableViewCell.swift in Sources */,
+				D36A6EB41FF0559F006016D1 /* PropertyPickerTableCellView.swift in Sources */,
+				D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */,
+				D3B3EE911FE7275700456980 /* Item.swift in Sources */,
+				D321B3321FE3355700AC865F /* AbletonView.swift in Sources */,
+				D321B32E1FE3354E00AC865F /* AbletonViewDataSource.swift in Sources */,
+				D321B3391FE3361300AC865F /* Theme.swift in Sources */,
+				D321B2F41FE3347E00AC865F /* AppDelegate.swift in Sources */,
+				D3B1EF3E1FF334EB00178D83 /* MainSplitView.swift in Sources */,
+				D321B2F81FE3347E00AC865F /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D38669ED1FE0865B0061A01B /* Sources */ = {
+		D321B3031FE3347E00AC865F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38669F61FE0865B0061A01B /* PeltTests.swift in Sources */,
+				D321B30C1FE3347E00AC865F /* PeltTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D321B30E1FE3347E00AC865F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D321B3171FE3347E00AC865F /* PeltUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D38669F31FE0865B0061A01B /* PBXTargetDependency */ = {
+		D321B3091FE3347E00AC865F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D38669E01FE0865B0061A01B /* Pelt */;
-			targetProxy = D38669F21FE0865B0061A01B /* PBXContainerItemProxy */;
+			target = D321B2EF1FE3347E00AC865F /* Pelt */;
+			targetProxy = D321B3081FE3347E00AC865F /* PBXContainerItemProxy */;
+		};
+		D321B3141FE3347E00AC865F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D321B2EF1FE3347E00AC865F /* Pelt */;
+			targetProxy = D321B3131FE3347E00AC865F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D38669E81FE0865B0061A01B /* MainMenu.xib */ = {
+		D321B2FE1FE3347E00AC865F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D38669E91FE0865B0061A01B /* Base */,
+				D321B2FF1FE3347E00AC865F /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D38669F81FE0865B0061A01B /* Debug */ = {
+		D321B3191FE3347E00AC865F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +459,7 @@
 			};
 			name = Debug;
 		};
-		D38669F91FE0865B0061A01B /* Release */ = {
+		D321B31A1FE3347E00AC865F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -346,7 +508,7 @@
 			};
 			name = Release;
 		};
-		D38669FB1FE0865B0061A01B /* Debug */ = {
+		D321B31C1FE3347E00AC865F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -356,13 +518,13 @@
 				DEVELOPMENT_TEAM = B4MRNC88BC;
 				INFOPLIST_FILE = Pelt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eviathan.Pelt;
+				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.Pelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		D38669FC1FE0865B0061A01B /* Release */ = {
+		D321B31D1FE3347E00AC865F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -372,13 +534,13 @@
 				DEVELOPMENT_TEAM = B4MRNC88BC;
 				INFOPLIST_FILE = Pelt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eviathan.Pelt;
+				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.Pelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		D38669FE1FE0865B0061A01B /* Debug */ = {
+		D321B31F1FE3347E00AC865F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -388,14 +550,14 @@
 				DEVELOPMENT_TEAM = B4MRNC88BC;
 				INFOPLIST_FILE = PeltTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eviathan.PeltTests;
+				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pelt.app/Contents/MacOS/Pelt";
 			};
 			name = Debug;
 		};
-		D38669FF1FE0865B0061A01B /* Release */ = {
+		D321B3201FE3347E00AC865F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -405,44 +567,98 @@
 				DEVELOPMENT_TEAM = B4MRNC88BC;
 				INFOPLIST_FILE = PeltTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eviathan.PeltTests;
+				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pelt.app/Contents/MacOS/Pelt";
+			};
+			name = Release;
+		};
+		D321B3221FE3347E00AC865F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4MRNC88BC;
+				INFOPLIST_FILE = PeltUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Pelt;
+			};
+			name = Debug;
+		};
+		D321B3231FE3347E00AC865F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4MRNC88BC;
+				INFOPLIST_FILE = PeltUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Pelt;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D38669DC1FE0865B0061A01B /* Build configuration list for PBXProject "Pelt" */ = {
+		D321B2EB1FE3347E00AC865F /* Build configuration list for PBXProject "Pelt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D38669F81FE0865B0061A01B /* Debug */,
-				D38669F91FE0865B0061A01B /* Release */,
+				D321B3191FE3347E00AC865F /* Debug */,
+				D321B31A1FE3347E00AC865F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D38669FA1FE0865B0061A01B /* Build configuration list for PBXNativeTarget "Pelt" */ = {
+		D321B31B1FE3347E00AC865F /* Build configuration list for PBXNativeTarget "Pelt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D38669FB1FE0865B0061A01B /* Debug */,
-				D38669FC1FE0865B0061A01B /* Release */,
+				D321B31C1FE3347E00AC865F /* Debug */,
+				D321B31D1FE3347E00AC865F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D38669FD1FE0865B0061A01B /* Build configuration list for PBXNativeTarget "PeltTests" */ = {
+		D321B31E1FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D38669FE1FE0865B0061A01B /* Debug */,
-				D38669FF1FE0865B0061A01B /* Release */,
+				D321B31F1FE3347E00AC865F /* Debug */,
+				D321B3201FE3347E00AC865F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D321B3211FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D321B3221FE3347E00AC865F /* Debug */,
+				D321B3231FE3347E00AC865F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D321B2F91FE3347E00AC865F /* Document.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D321B2FA1FE3347E00AC865F /* Document.xcdatamodel */,
+			);
+			currentVersion = D321B2FA1FE3347E00AC865F /* Document.xcdatamodel */;
+			path = Document.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = D38669D91FE0865B0061A01B /* Project object */;
+	rootObject = D321B2E81FE3347E00AC865F /* Project object */;
 }
