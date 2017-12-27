@@ -18,10 +18,10 @@ class Color {
     init() { }
     
     init(_ color: NSColor) {
-        r = Item(Double(color.redComponent))
-        g = Item(Double(color.greenComponent))
-        b = Item(Double(color.blueComponent))
-        alpha = Item(Double(color.alphaComponent))
+        r = Item(Float(color.redComponent))
+        g = Item(Float(color.greenComponent))
+        b = Item(Float(color.blueComponent))
+        alpha = Item(Float(color.alphaComponent))
     }
     
     func getNSColor() -> NSColor {

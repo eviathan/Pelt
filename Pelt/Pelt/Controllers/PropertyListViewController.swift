@@ -45,7 +45,9 @@ class PropertyListViewController: NSViewController, NSTableViewDelegate, NSTable
             let propertyValue = App.instance.theme.properties[propertyKey]
 
             result.label.stringValue = propertyKey
-            result.propertySlider.floatValue = Float(propertyValue!)!
+            
+            result.propertySlider.maxValue = Double((propertyValue?.maxValue)!)
+            result.propertySlider.floatValue = (propertyValue?.value)!
 
             return result
         }
