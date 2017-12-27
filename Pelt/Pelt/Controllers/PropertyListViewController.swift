@@ -9,26 +9,46 @@
 import Foundation
 import Cocoa
 
-class PropertyListViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {   
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        return 0
+class PropertyListViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, DataModelDelegate {
+    
+    // Outlets
+    @IBOutlet weak var propertyListView: NSTableView!
+    
+    private var dataModel: Theme = Theme()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        propertyListView.delegate = self
+        propertyListView.dataSource = self
     }
     
-//    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-//        return CGFloat(50.0)
-//    }
+    // DataModelDelegate Methods
+    func didRecieveDataUpdate(theme: Theme) {
+        // TODO: Implement this properly
+    }
+    
+    // Properties List Methods
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return App.instance.theme.properties.count
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return CGFloat(58.0)
+    }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-//        if(tableColumn?.identifier.rawValue == "colorCell") {
-//            let result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "colorCell"), owner: self) as! ColorPickerTableCellView
-//            let colorKey = Array(App.instance.theme.colors.keys)[row]
-//            let color = App.instance.theme.colors[colorKey]
-//
-//            result.label.stringValue = colorKey
-//            result.color.color = color!
-//
-//            return result
-//        }
+        let propertyCellId = "propertyCell"
+        if(tableColumn?.identifier.rawValue == propertyCellId) {
+            let result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: propertyCellId), owner: self) as! PropertyPickerTableCellView
+            
+            let propertyKey = Array(App.instance.theme.properties.keys)[row]
+            let propertyValue = App.instance.theme.properties[propertyKey]
+
+            result.label.stringValue = propertyKey
+            result.propertySlider.floatValue = propertyValue!
+
+            return result
+        }
         return nil
     }
     

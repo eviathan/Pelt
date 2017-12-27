@@ -21,7 +21,7 @@ class Theme {
     let creator: String = "Pelt 1.0"
     let revision: String = "b8761d5b3a670e00b16e716b603a7c9f50dcfcb0" // NOTE: This needs to be changed
     
-    var props: [String: Float] = [
+    var properties: [String: Float] = [
         "MinVelocityNoteBlendFactor" : 0.200000003,
         "StripedBackgroundShadeFactor" : 0.8999999762,
         "AutomationLaneHeaderAlpha" : 60,
