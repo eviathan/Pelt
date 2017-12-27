@@ -24,8 +24,8 @@ class Theme {
     var properties: [String: Item] = [
         "MinVelocityNoteBlendFactor" : Item(),
         "StripedBackgroundShadeFactor" : Item(),
-        "AutomationLaneHeaderAlpha" : Item(multiplier: 255, maxValue: 255),
-        "AutomationLaneClipBodyAlpha" : Item(multiplier: 255, maxValue: 255),
+        "AutomationLaneHeaderAlpha" : Item(maxValue: 255, type: .Int),
+        "AutomationLaneClipBodyAlpha" : Item(maxValue: 255, type: .Int),
         "DefaultBlendFactor" : Item(),
         "IconBlendFactor" : Item(),
         "ClipBlendFactor" : Item(),
