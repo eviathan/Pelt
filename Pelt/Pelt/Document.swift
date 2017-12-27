@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Document: NSPersistentDocument {
+class Document: NSDocument {
 
     override init() {
         super.init()
@@ -16,7 +16,7 @@ class Document: NSPersistentDocument {
     }
 
     override class var autosavesInPlace: Bool {
-        return true
+        return false
     }
 
     override func makeWindowControllers() {
@@ -27,12 +27,10 @@ class Document: NSPersistentDocument {
     }
     
     override func data(ofType typeName: String) throws -> Data {
-        if let _ = self.windowControllers[0].contentViewController as? ColorListViewController {
-            //Get the textView's String Value; or call a function that will create a string of what needs to be saved
-            return App.instance.theme.serialise().data(using: .utf8)!
-        }else {
-            throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
-        }
+        return App.instance.theme.serialise().data(using: .utf8)!
     }
-
+    
+    override func read(from data: Data, ofType typeName: String) throws {
+        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+    }
 }
