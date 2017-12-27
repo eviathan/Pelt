@@ -37,6 +37,22 @@ class Document: NSDocument, XMLParserDelegate {
     }
     
     // Parser Methods
+    
+    var isInsideColor: Bool = false
+    var currentColorKey: String = ""
+    var currentRedValue: CGFloat = 0.0
+    var currentGreenValue: CGFloat = 0.0
+    var currentBlueValue: CGFloat = 0.0
+    var currentAlphaValue: CGFloat = 0.0
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        // Parse Colors
+        if isInsideColor && App.instance.theme.colors[currentColorKey] != nil {
+            isInsideColor = false
+            App.instance.theme.colors[currentColorKey] = NSColor(red: currentRedValue, green: currentGreenValue, blue: currentBlueValue, alpha: currentAlphaValue)
+        }
+    }
+    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         // Parse Ableton atrtibute settings
@@ -66,16 +82,31 @@ class Document: NSDocument, XMLParserDelegate {
         }
         
         // Parse Colors
-            
-//            if let name = attributeDict["name"] {
-//                tempTag.name = name;
-//            }
-//            if let c = attributeDict["count"] {
-//                if let count = Int(c) {
-//                    tempTag.count = count;
-//                }
-//            }
-//            self.item.tag.append(tempTag);
+        if App.instance.theme.colors[elementName] != nil {
+            currentColorKey = elementName
+            isInsideColor = true
+        }
         
+        // Parse Color Data
+        if elementName == "R" {
+            if let value = attributeDict["Value"] {
+                currentRedValue = CGFloat(Float(value)!/255.0)
+            }
+        }
+        if elementName == "G" {
+            if let value = attributeDict["Value"] {
+                currentGreenValue = CGFloat(Float(value)!/255.0)
+            }
+        }
+        if elementName == "B" {
+            if let value = attributeDict["Value"] {
+                currentBlueValue = CGFloat(Float(value)!/255.0)
+            }
+        }
+        if elementName == "Alpha" {
+            if let value = attributeDict["Value"] {
+                currentAlphaValue = CGFloat(Float(value)!/255.0)
+            }
+        }
     }
 }
