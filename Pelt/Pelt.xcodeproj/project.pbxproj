@@ -25,6 +25,7 @@
 		D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */; };
 		D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */; };
 		D3B1EF3C1FF319EA00178D83 /* PropertyPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */; };
+		D3B1EF3E1FF334EB00178D83 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */; };
 		D3B3EE911FE7275700456980 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE901FE7275700456980 /* Item.swift */; };
 		D3B3EE931FE727E500456980 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE921FE727E500456980 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
 		D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
 		D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyPickerTableViewCell.swift; sourceTree = "<group>"; };
+		D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
 		D3B3EE901FE7275700456980 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D3B3EE921FE727E500456980 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 				D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */,
 				D321B3301FE3355700AC865F /* AbletonView.swift */,
 				D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */,
+				D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				D321B32E1FE3354E00AC865F /* AbletonViewDataSource.swift in Sources */,
 				D321B3391FE3361300AC865F /* Theme.swift in Sources */,
 				D321B2F41FE3347E00AC865F /* AppDelegate.swift in Sources */,
+				D3B1EF3E1FF334EB00178D83 /* MainSplitView.swift in Sources */,
 				D321B2F81FE3347E00AC865F /* Document.swift in Sources */,
 				D321B33E1FE3B5AD00AC865F /* ASKAtomicStore.swift in Sources */,
 			);
