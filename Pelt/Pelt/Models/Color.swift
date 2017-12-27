@@ -15,7 +15,12 @@ class Color {
     var b: Item = Item()
     var alpha: Item = Item()
     
-    init() { }
+    init() {
+        r = Item(Float(NSColor.white.redComponent))
+        g = Item(Float(NSColor.white.greenComponent))
+        b = Item(Float(NSColor.white.blueComponent))
+        alpha = Item(Float(NSColor.white.alphaComponent))
+    }
     
     init(_ color: NSColor) {
         r = Item(Float(color.redComponent))
