@@ -150,7 +150,6 @@
 			path = PeltTests;
 			sourceTree = "<group>";
 		};
-
 		D321B3151FE3347E00AC865F /* PeltUITests */ = {
 			isa = PBXGroup;
 			children = (

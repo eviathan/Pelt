@@ -15,11 +15,11 @@ class Theme {
     
     var selectedKey: String = ""
     
-    let majorVersion: Int = 5
-    let minorVersion: String = "10.0_370"
-    let schemaChangeCount: Int = 1
-    let creator: String = "Pelt 1.0"
-    let revision: String = "b8761d5b3a670e00b16e716b603a7c9f50dcfcb0" // NOTE: This needs to be changed
+    var majorVersion: Int = 5
+    var minorVersion: String = "10.0_370"
+    var schemaChangeCount: Int = 1
+    var creator: String = "Pelt 1.0"
+    var revision: String = "b8761d5b3a670e00b16e716b603a7c9f50dcfcb0" // NOTE: This needs to be changed
     
     var properties: [String: Float] = [
         "MinVelocityNoteBlendFactor" : 0.200000003,
