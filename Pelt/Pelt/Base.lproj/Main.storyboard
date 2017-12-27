@@ -688,10 +688,10 @@
                     <window key="window" title="Pelt" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="PeltTheme" animationBehavior="default" titlebarAppearsTransparent="YES" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="294" height="500"/>
+                        <rect key="contentRect" x="196" y="240" width="1000" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="294" height="500"/>
-                        <value key="maxSize" type="size" width="294" height="500"/>
+                        <value key="maxSize" type="size" width="1000" height="500"/>
                         <connections>
                             <outlet property="delegate" destination="jGA-0Y-lOj" id="98r-iN-zZc"/>
                         </connections>
@@ -710,6 +710,7 @@
                 <splitViewController id="itz-uP-yBN" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem canCollapse="YES" holdingPriority="260" behavior="sidebar" id="6sJ-gJ-tli"/>
+                        <splitViewItem id="YVE-Ee-FOJ"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="UwF-hk-783" customClass="MainSplitView" customModule="Pelt" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="487" height="300"/>
@@ -721,6 +722,7 @@
                     <connections>
                         <outlet property="splitView" destination="UwF-hk-783" id="Y3v-O6-ZZM"/>
                         <segue destination="i2C-uH-m9w" kind="relationship" relationship="splitItems" id="Cby-AR-Eqo"/>
+                        <segue destination="F5Q-MW-bo1" kind="relationship" relationship="splitItems" id="Gzh-pc-bwX"/>
                     </connections>
                 </splitViewController>
                 <customObject id="uHX-EG-RjB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
