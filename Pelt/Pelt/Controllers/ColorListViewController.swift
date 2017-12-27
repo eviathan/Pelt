@@ -80,6 +80,7 @@ class ColorListViewController: NSViewController, NSTableViewDelegate, NSTableVie
         
         let colorPanel = NSColorPanel.shared
         NSColorPanel.shared.color = App.instance.theme.colors[App.instance.theme.selectedKey]!
+        colorPanel.showsAlpha = true
         colorPanel.setTarget(self)
         colorPanel.setAction(#selector(colorPicked))
         colorPanel.makeKeyAndOrderFront(self)
