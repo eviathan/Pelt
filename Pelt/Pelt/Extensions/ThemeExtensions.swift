@@ -12,22 +12,17 @@ import Foundation
 // NOTE: This whole file is completely stupid. Refactor to use a library. Its such a small task though I was too lazy to find one.
 extension CGFloat {
     func convert() -> Int{
-        return Int(self * 256)
+        return Int(self * 255)
     }
 }
 
 extension Theme {
     func serialise() -> String {
-        return "<test></test>"
-        let props: String = self.properties.map { key, value in "<\(key) Value\"\(value)\">" }.joined()
         
-        let colors: String = self.colors.map { key, value in "<\(key)><R Value=\"\(value.redComponent.convert())\" /><G Value=\"\(value.greenComponent.convert())\" /><B Value=\"\(value.blueComponent.convert())\" /><Alpha Value=\"\(value.alphaComponent.convert())\" /></\(key)>" }.joined()
+        let props: String = self.properties.map { key, value in "<\(key) Value=\"\(value)\" />\n" }.joined()
         
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Ableton MajorVersion=\"\(self.majorVersion)\" MinorVersion=\"\(self.minorVersion)\" SchemaChangeCount=\"\(self.schemaChangeCount)\" Creator=\"\(self.creator)\" Revision=\"\(self.revision)\"><SkinManager>\(props)\(colors)</SkinManager></Ableton>"
-    }
-}
-extension String {
-    func deserialise() -> Theme{
-        return Theme()
+        let colors: String = self.colors.map { key, value in "<\(key)>\n<R Value=\"\(value.redComponent.convert())\" />\n<G Value=\"\(value.greenComponent.convert())\" />\n<B Value=\"\(value.blueComponent.convert())\" />\n<Alpha Value=\"\(value.alphaComponent.convert())\" />\n</\(key)>\n" }.joined()
+        
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Ableton MajorVersion=\"\(self.majorVersion)\" MinorVersion=\"\(self.minorVersion)\" SchemaChangeCount=\"\(self.schemaChangeCount)\" Creator=\"\(self.creator)\" Revision=\"\(self.revision)\">\n<SkinManager>\n\(props)\(colors)</SkinManager>\n</Ableton>"
     }
 }
