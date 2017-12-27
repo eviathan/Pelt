@@ -21,21 +21,21 @@ class Theme {
     var creator: String = "Pelt 1.0"
     var revision: String = "b8761d5b3a670e00b16e716b603a7c9f50dcfcb0" // NOTE: This needs to be changed
     
-    var properties: [String: String] = [
-        "MinVelocityNoteBlendFactor" : "0.200000003",
-        "StripedBackgroundShadeFactor" : "0.8999999762",
-        "AutomationLaneHeaderAlpha" : "60",
-        "AutomationLaneClipBodyAlpha" : "60",
-        "DefaultBlendFactor" : "0.8000000119",
-        "IconBlendFactor" : "0.6499999762",
-        "ClipBlendFactor" : "0.75",
-        "NoteBorderStandbyBlendFactor" : "0.5",
-        "RetroDisplayBlendFactor" : "0.8999999762",
-        "CheckControlNotCheckedBlendFactor" : "0.5",
-        "MixSurfaceAreaBlendFactor" : "0.349999994",
-        "TextFrameSegmentBlendFactor" : "0.6000000238",
-        "VelocityEditorForegroundSelectedBlendFactor" : "0.6000000238",
-        "NoteDisabledSelectedBlendFactor" : "0.5"
+    var properties: [String: Item] = [
+        "MinVelocityNoteBlendFactor" : Item(),
+        "StripedBackgroundShadeFactor" : Item(),
+        "AutomationLaneHeaderAlpha" : Item(multiplier: 255, maxValue: 255),
+        "AutomationLaneClipBodyAlpha" : Item(multiplier: 255, maxValue: 255),
+        "DefaultBlendFactor" : Item(),
+        "IconBlendFactor" : Item(),
+        "ClipBlendFactor" : Item(),
+        "NoteBorderStandbyBlendFactor" : Item(),
+        "RetroDisplayBlendFactor" : Item(),
+        "CheckControlNotCheckedBlendFactor" : Item(),
+        "MixSurfaceAreaBlendFactor" : Item(),
+        "TextFrameSegmentBlendFactor" : Item(),
+        "VelocityEditorForegroundSelectedBlendFactor" : Item(),
+        "NoteDisabledSelectedBlendFactor" : Item(),
     ]
     
     var colors: [String : NSColor] = [

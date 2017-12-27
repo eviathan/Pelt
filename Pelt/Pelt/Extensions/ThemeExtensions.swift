@@ -19,7 +19,7 @@ extension CGFloat {
 extension Theme {
     func serialise() -> String {
         
-        let props: String = self.properties.map { key, value in "<\(key) Value=\"\(value)\" />\n" }.joined()
+        let props: String = self.properties.map { key, value in "<\(key) Value=\"\(value.getStringValue())\" />\n" }.joined()
         
         let colors: String = self.colors.map { key, value in "<\(key)>\n<R Value=\"\(value.redComponent.convert())\" />\n<G Value=\"\(value.greenComponent.convert())\" />\n<B Value=\"\(value.blueComponent.convert())\" />\n<Alpha Value=\"\(value.alphaComponent.convert())\" />\n</\(key)>\n" }.joined()
         

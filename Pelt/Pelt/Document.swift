@@ -71,7 +71,12 @@ class Document: NSDocument, XMLParserDelegate {
         let alpha: CGFloat = CGFloat(Float(indexer["Alpha"].element!.attribute(by: "Value")!.text)!/255.0)
         App.instance.theme.colors[(indexer.element?.name)!] = NSColor(red: red, green: green, blue: blue, alpha: alpha)
     }
+    
     private func setProperty(_ indexer: XMLIndexer) {
-        
+        if let item = App.instance.theme.properties[(indexer.element?.name)!] {
+            let stringValue = indexer.element!.attribute(by: "Value")!.text
+            item.value = Float(stringValue)!        
+            App.instance.theme.properties[(indexer.element?.name)!] = item
+        }
     }
 }
