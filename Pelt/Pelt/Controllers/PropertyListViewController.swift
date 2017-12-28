@@ -41,7 +41,9 @@ class PropertyListViewController: NSViewController, NSTableViewDelegate, NSTable
         if(tableColumn?.identifier.rawValue == propertyCellId) {
             let result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: propertyCellId), owner: self) as! PropertyPickerTableCellView
             
-            let propertyKey = Array(App.instance.theme.properties.keys)[row]
+            let propertyKey = Array(App.instance.theme.properties.keys).sorted(){
+                (s1, s2) -> Bool in return s1.localizedStandardCompare(s2) == .orderedAscending
+                }[row]
             let propertyValue = App.instance.theme.properties[propertyKey]
 
             result.label.stringValue = propertyKey

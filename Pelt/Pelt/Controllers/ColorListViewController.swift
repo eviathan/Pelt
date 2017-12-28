@@ -56,7 +56,9 @@ class ColorListViewController: NSViewController, NSTableViewDelegate, NSTableVie
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         if(tableColumn?.identifier.rawValue == "colorCell") {
             let result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "colorCell"), owner: self) as! ColorPickerTableCellView
-            let colorKey = Array(App.instance.theme.colors.keys)[row]
+            let colorKey = Array(App.instance.theme.colors.keys).sorted{
+                (s1, s2) -> Bool in return s1.localizedStandardCompare(s2) == .orderedAscending
+                }[row]
             let color = App.instance.theme.colors[colorKey]
             
             result.label.stringValue = colorKey
@@ -72,7 +74,9 @@ class ColorListViewController: NSViewController, NSTableViewDelegate, NSTableVie
         let tv = notification.object as! NSTableView
         let row = tv.selectedRow
         
-        App.instance.theme.selectedKey = Array(App.instance.theme.colors.keys)[row]
+        App.instance.theme.selectedKey = Array(App.instance.theme.colors.keys).sorted {
+            (s1, s2) -> Bool in return s1.localizedStandardCompare(s2) == .orderedAscending
+            }[row]
         
         if NSColorPanel.sharedColorPanelExists {
             NSColorPanel.shared.close()
