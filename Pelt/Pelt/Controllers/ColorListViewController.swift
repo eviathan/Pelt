@@ -61,7 +61,7 @@ class ColorListViewController: NSViewController, NSTableViewDelegate, NSTableVie
                 }[row]
             let color = App.instance.theme.colors[colorKey]
             
-            result.label.stringValue = colorKey
+            result.label.stringValue = colorKey.camelCaseToWords()
             result.color.color = color!
             
             return result

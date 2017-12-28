@@ -46,7 +46,7 @@ class PropertyListViewController: NSViewController, NSTableViewDelegate, NSTable
                 }[row]
             let propertyValue = App.instance.theme.properties[propertyKey]
 
-            result.label.stringValue = propertyKey
+            result.label.stringValue = propertyKey.camelCaseToWords()
             
             result.propertySlider.maxValue = Double((propertyValue?.maxValue)!)
             result.propertySlider.floatValue = (propertyValue?.value)!
