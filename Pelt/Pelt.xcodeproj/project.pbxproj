@@ -21,7 +21,7 @@
 		D321B3391FE3361300AC865F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3381FE3361300AC865F /* Theme.swift */; };
 		D321B33B1FE33B2900AC865F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B33A1FE33B2900AC865F /* App.swift */; };
 		D34A3A991FF549DB00224A17 /* ColorWell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A3A981FF549DB00224A17 /* ColorWell.swift */; };
-		D36A6EB41FF0559F006016D1 /* PropertyPickerTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */; };
+		D36A6EB41FF0559F006016D1 /* ColorPickerTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */; };
 		D39F85AA1FF5305B00F4B1A6 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F85A91FF5305B00F4B1A6 /* StringExtensions.swift */; };
 		D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */; };
 		D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */; };
@@ -31,7 +31,6 @@
 		D3B1EF4E1FF3585200178D83 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3B1EF4C1FF3585200178D83 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3B1EF511FF37EC700178D83 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF501FF37EC700178D83 /* ItemType.swift */; };
 		D3B3EE911FE7275700456980 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE901FE7275700456980 /* Item.swift */; };
-		D3B3EE931FE727E500456980 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE921FE727E500456980 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +86,7 @@
 		D321B3381FE3361300AC865F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D321B33A1FE33B2900AC865F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D34A3A981FF549DB00224A17 /* ColorWell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWell.swift; sourceTree = "<group>"; };
-		D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyPickerTableCellView.swift; sourceTree = "<group>"; };
+		D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerTableCellView.swift; sourceTree = "<group>"; };
 		D39F85A91FF5305B00F4B1A6 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D3B1EF351FF2FBE200178D83 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
 		D3B1EF371FF30A9000178D83 /* PropertyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 		D3B1EF4C1FF3585200178D83 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/Mac/SWXMLHash.framework; sourceTree = "<group>"; };
 		D3B1EF501FF37EC700178D83 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		D3B3EE901FE7275700456980 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		D3B3EE921FE727E500456980 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +215,7 @@
 			children = (
 				D3B1EF3B1FF319E900178D83 /* PropertyPickerTableViewCell.swift */,
 				D321B3301FE3355700AC865F /* AbletonView.swift */,
-				D36A6EB31FF0559F006016D1 /* PropertyPickerTableCellView.swift */,
+				D36A6EB31FF0559F006016D1 /* ColorPickerTableCellView.swift */,
 				D3B1EF3D1FF334EB00178D83 /* MainSplitView.swift */,
 				D34A3A981FF549DB00224A17 /* ColorWell.swift */,
 			);
@@ -229,7 +227,6 @@
 			children = (
 				D321B3381FE3361300AC865F /* Theme.swift */,
 				D3B3EE901FE7275700456980 /* Item.swift */,
-				D3B3EE921FE727E500456980 /* Color.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,11 +376,10 @@
 				D321B2FB1FE3347E00AC865F /* Document.xcdatamodeld in Sources */,
 				D321B33B1FE33B2900AC865F /* App.swift in Sources */,
 				D321B3331FE3355700AC865F /* ThemeExtensions.swift in Sources */,
-				D3B3EE931FE727E500456980 /* Color.swift in Sources */,
 				D3B1EF361FF2FBE200178D83 /* ColorListViewController.swift in Sources */,
 				D3B1EF381FF30A9000178D83 /* PropertyListViewController.swift in Sources */,
 				D3B1EF3C1FF319EA00178D83 /* PropertyPickerTableViewCell.swift in Sources */,
-				D36A6EB41FF0559F006016D1 /* PropertyPickerTableCellView.swift in Sources */,
+				D36A6EB41FF0559F006016D1 /* ColorPickerTableCellView.swift in Sources */,
 				D34A3A991FF549DB00224A17 /* ColorWell.swift in Sources */,
 				D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */,
 				D3B3EE911FE7275700456980 /* Item.swift in Sources */,
