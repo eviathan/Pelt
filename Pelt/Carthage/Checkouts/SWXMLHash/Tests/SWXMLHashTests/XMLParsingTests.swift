@@ -27,6 +27,7 @@ import SWXMLHash
 import XCTest
 
 // swiftlint:disable line_length
+// swiftlint:disable type_body_length
 
 class XMLParsingTests: XCTestCase {
     let xmlToParse = """
@@ -204,6 +205,13 @@ class XMLParsingTests: XCTestCase {
         XCTAssertEqual(parsed.description, "<root><foo><what id=\"myId\">puppies</what></foo></root>")
     }
 
+    func testShouldBeAbleToGetInnerXML() {
+        let testXML = "<root><foo><what id=\"myId\">puppies</what><elems><elem>1</elem><elem>2</elem></elems></foo></root>"
+        let parsed = SWXMLHash.parse(testXML)
+
+        XCTAssertEqual(parsed["root"]["foo"].element!.innerXML, "<what id=\"myId\">puppies</what><elems><elem>1</elem><elem>2</elem></elems>")
+    }
+
     // error handling
 
     func testShouldReturnNilWhenKeysDontMatch() {
@@ -244,6 +252,87 @@ class XMLParsingTests: XCTestCase {
         }
         XCTAssertNotNil(err)
     }
+
+    func testShouldBeAbleToCreateASubIndexer() {
+        let xmlToParse = """
+            <root>
+                <some-weird-element />
+                <another-weird-element />
+                <prop1 name="prop1" />
+                <prop2 name="prop2" />
+                <basicItem id="1234a">
+                    <name>item 1</name>
+                    <price>1</price>
+                </basicItem>
+                <prop3 name="prop3" />
+                <last-weird-element />
+            </root>
+        """
+
+        let parser = SWXMLHash.parse(xmlToParse)
+
+        let subIndexer = parser["root"].filterChildren { _, index in index >= 2 && index <= 5 }
+
+        XCTAssertNil(subIndexer["some-weird-element"].element)
+        XCTAssertNil(subIndexer["another-weird-element"].element)
+        XCTAssertNotNil(subIndexer["prop1"].element)
+        XCTAssertNotNil(subIndexer["prop2"].element)
+        XCTAssertNotNil(subIndexer["basicItem"].element)
+        XCTAssertNotNil(subIndexer["prop3"].element)
+        XCTAssertNil(subIndexer["last-weird-element"].element)
+    }
+
+    func testShouldBeAbleToCreateASubIndexerFromFilter() {
+        let subIndexer = xml!["root"]["catalog"]["book"][1].filterChildren { elem, _ in
+            let filterByNames = ["title", "genre", "price"]
+            return filterByNames.contains(elem.name)
+        }
+
+        XCTAssertEqual(subIndexer.children[0].element?.name, "title")
+        XCTAssertEqual(subIndexer.children[1].element?.name, "genre")
+        XCTAssertEqual(subIndexer.children[2].element?.name, "price")
+
+        XCTAssertEqual(subIndexer.children[0].element?.text, "Midnight Rain")
+        XCTAssertEqual(subIndexer.children[1].element?.text, "Fantasy")
+        XCTAssertEqual(subIndexer.children[2].element?.text, "5.95")
+    }
+
+    func testShouldBeAbleToFilterOnIndexer() {
+        let subIndexer = xml!["root"]["catalog"]["book"]
+            .filterAll { elem, _ in elem.attribute(by: "id")!.text == "bk102" }
+            .filterChildren { _, index in index >= 1 && index <= 3 }
+
+        XCTAssertEqual(subIndexer.children[0].element?.name, "title")
+        XCTAssertEqual(subIndexer.children[1].element?.name, "genre")
+        XCTAssertEqual(subIndexer.children[2].element?.name, "price")
+
+        XCTAssertEqual(subIndexer.children[0].element?.text, "Midnight Rain")
+        XCTAssertEqual(subIndexer.children[1].element?.text, "Fantasy")
+        XCTAssertEqual(subIndexer.children[2].element?.text, "5.95")
+    }
+
+    func testShouldThrowErrorForInvalidXML() {
+        let invalidXML = "<uh oh>what is this"
+        var err: ParsingError? = nil
+        let parser = SWXMLHash.config { config in
+            config.detectParsingErrors = true
+        }.parse(invalidXML)
+
+        switch parser {
+        case .parsingError(let error):
+            err = error
+        default:
+            err = nil
+        }
+
+        XCTAssertNotNil(err)
+
+#if !os(Linux)
+        if err != nil {
+            XCTAssert(err!.line == 1)
+        }
+#endif
+    }
 }
 
 extension XMLParsingTests {
@@ -251,8 +340,11 @@ extension XMLParsingTests {
         return [
             ("testShouldBeAbleToParseIndividualElements", testShouldBeAbleToParseIndividualElements),
             ("testShouldBeAbleToParseElementGroups", testShouldBeAbleToParseElementGroups),
+            ("testShouldBeAbleToParseElementGroupsByIndex", testShouldBeAbleToParseElementGroupsByIndex),
+            ("testShouldBeAbleToByIndexWithoutGoingOutOfBounds", testShouldBeAbleToByIndexWithoutGoingOutOfBounds),
             ("testShouldBeAbleToParseAttributes", testShouldBeAbleToParseAttributes),
             ("testShouldBeAbleToLookUpElementsByNameAndAttribute", testShouldBeAbleToLookUpElementsByNameAndAttribute),
+            ("testShouldBeAbleToLookUpElementsByNameAndAttributeCaseInsensitive", testShouldBeAbleToLookUpElementsByNameAndAttributeCaseInsensitive),
             ("testShouldBeAbleToIterateElementGroups", testShouldBeAbleToIterateElementGroups),
             ("testShouldBeAbleToIterateElementGroupsEvenIfOnlyOneElementIsFound", testShouldBeAbleToIterateElementGroupsEvenIfOnlyOneElementIsFound),
             ("testShouldBeAbleToIndexElementGroupsEvenIfOnlyOneElementIsFound", testShouldBeAbleToIndexElementGroupsEvenIfOnlyOneElementIsFound),
@@ -266,7 +358,10 @@ extension XMLParsingTests {
             ("testShouldReturnNilWhenKeysDontMatch", testShouldReturnNilWhenKeysDontMatch),
             ("testShouldProvideAnErrorObjectWhenKeysDontMatch", testShouldProvideAnErrorObjectWhenKeysDontMatch),
             ("testShouldProvideAnErrorElementWhenIndexersDontMatch", testShouldProvideAnErrorElementWhenIndexersDontMatch),
-            ("testShouldStillReturnErrorsWhenAccessingViaSubscripting", testShouldStillReturnErrorsWhenAccessingViaSubscripting)
+            ("testShouldStillReturnErrorsWhenAccessingViaSubscripting", testShouldStillReturnErrorsWhenAccessingViaSubscripting),
+            ("testShouldBeAbleToCreateASubIndexerFromFilter", testShouldBeAbleToCreateASubIndexerFromFilter),
+            ("testShouldBeAbleToFilterOnIndexer", testShouldBeAbleToFilterOnIndexer),
+            ("testShouldThrowErrorForInvalidXML", testShouldThrowErrorForInvalidXML)
         ]
     }
 }

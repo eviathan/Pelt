@@ -34,15 +34,15 @@ class TypeConversionArrayOfNonPrimitiveTypesTests: XCTestCase {
     let xmlWithArraysOfTypes = """
         <root>
           <arrayOfGoodBasicItems>
-            <basicItem>
+            <basicItem id="1234a">
               <name>item 1</name>
               <price>1</price>
             </basicItem>
-            <basicItem>
+            <basicItem id="1234b">
               <name>item 2</name>
               <price>2</price>
             </basicItem>
-            <basicItem>
+            <basicItem id="1234c">
               <name>item 3</name>
               <price>3</price>
             </basicItem>
@@ -75,9 +75,9 @@ class TypeConversionArrayOfNonPrimitiveTypesTests: XCTestCase {
     """
 
     let correctBasicItems = [
-        BasicItem(name: "item 1", price: 1),
-        BasicItem(name: "item 2", price: 2),
-        BasicItem(name: "item 3", price: 3)
+        BasicItem(name: "item 1", price: 1, id: "1234a"),
+        BasicItem(name: "item 2", price: 2, id: "1234b"),
+        BasicItem(name: "item 3", price: 3, id: "1234c")
     ]
 
     let correctAttributeItems = [
@@ -114,7 +114,7 @@ class TypeConversionArrayOfNonPrimitiveTypesTests: XCTestCase {
     func testShouldConvertArrayOfGoodBasicitemsItemsToArrayOfOptionals() {
         do {
             let value: [BasicItem?] = try parser!["root"]["arrayOfGoodBasicItems"]["basicItem"].value()
-            XCTAssertEqual(value.flatMap({ $0 }), correctBasicItems)
+            XCTAssertEqual(value.compactMap({ $0 }), correctBasicItems)
         } catch {
             XCTFail("\(error)")
         }
@@ -180,7 +180,7 @@ class TypeConversionArrayOfNonPrimitiveTypesTests: XCTestCase {
     func testShouldConvertArrayOfGoodAttributeItemsToArrayOfOptionals() {
         do {
             let value: [AttributeItem?] = try parser!["root"]["arrayOfGoodAttributeItems"]["attributeItem"].value()
-            XCTAssertEqual(value.flatMap({ $0 }), correctAttributeItems)
+            XCTAssertEqual(value.compactMap({ $0 }), correctAttributeItems)
         } catch {
             XCTFail("\(error)")
         }
@@ -212,6 +212,50 @@ class TypeConversionArrayOfNonPrimitiveTypesTests: XCTestCase {
             }
         }
     }
+
+    func testFilterWithAttributesShouldWork() {
+        do {
+            let subParser = parser!["root"]["arrayOfGoodAttributeItems"]["attributeItem"].filterAll { _, idx in idx > 0 }
+
+            let values: [AttributeItem] = try subParser.value()
+
+            XCTAssertNotNil(values)
+            XCTAssertEqual(values[0].name, "attr 2")
+            XCTAssertEqual(values[0].price, 2.2)
+            XCTAssertEqual(values[1].name, "attr 3")
+            XCTAssertEqual(values[1].price, 3.3)
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
+
+    func testFilterAndSerializationSingleShouldWork() {
+        do {
+            let subParser = parser!["root"]["arrayOfGoodBasicItems"]["basicItem"].filterAll { _, idx in idx == 0 }
+
+            let value: BasicItem = try subParser.value()
+
+            XCTAssertNotNil(value)
+            XCTAssertEqual(value.id, "1234a")
+            XCTAssertEqual(value.id, "1234a")
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
+
+    func testFilterAndSerializationShouldWork() {
+        do {
+            let subParser = parser!["root"]["arrayOfGoodBasicItems"]["basicItem"].filterAll { _, idx in idx > 0 }
+
+            let values: [BasicItem] = try subParser.value()
+
+            XCTAssertNotNil(values)
+            XCTAssertEqual(values[0].id, "1234b")
+            XCTAssertEqual(values[1].id, "1234c")
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
 }
 
 extension TypeConversionArrayOfNonPrimitiveTypesTests {
@@ -223,12 +267,14 @@ extension TypeConversionArrayOfNonPrimitiveTypesTests {
             ("testShouldThrowWhenConvertingArrayOfBadBasicitemsToNonOptional", testShouldThrowWhenConvertingArrayOfBadBasicitemsToNonOptional),
             ("testShouldThrowWhenConvertingArrayOfBadBasicitemsToOptional", testShouldThrowWhenConvertingArrayOfBadBasicitemsToOptional),
             ("testShouldThrowWhenConvertingArrayOfBadBasicitemsToArrayOfOptionals", testShouldThrowWhenConvertingArrayOfBadBasicitemsToArrayOfOptionals),
+            ("testShouldConvertArrayOfEmptyMissingToOptional", testShouldConvertArrayOfEmptyMissingToOptional),
             ("testShouldConvertArrayOfGoodAttributeItemsToNonOptional", testShouldConvertArrayOfGoodAttributeItemsToNonOptional),
             ("testShouldConvertArrayOfGoodAttributeItemsToOptional", testShouldConvertArrayOfGoodAttributeItemsToOptional),
             ("testShouldConvertArrayOfGoodAttributeItemsToArrayOfOptionals", testShouldConvertArrayOfGoodAttributeItemsToArrayOfOptionals),
             ("testShouldThrowWhenConvertingArrayOfBadAttributeItemsToNonOptional", testShouldThrowWhenConvertingArrayOfBadAttributeItemsToNonOptional),
             ("testShouldThrowWhenConvertingArrayOfBadAttributeItemsToOptional", testShouldThrowWhenConvertingArrayOfBadAttributeItemsToOptional),
-            ("testShouldThrowWhenConvertingArrayOfBadAttributeItemsToArrayOfOptionals", testShouldThrowWhenConvertingArrayOfBadAttributeItemsToArrayOfOptionals)
+            ("testShouldThrowWhenConvertingArrayOfBadAttributeItemsToArrayOfOptionals", testShouldThrowWhenConvertingArrayOfBadAttributeItemsToArrayOfOptionals),
+            ("testFilterAndSerializationShouldWork", testFilterAndSerializationShouldWork)
         ]
     }
 }

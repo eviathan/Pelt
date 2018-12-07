@@ -37,7 +37,7 @@ class LazyTypesConversionTests: XCTestCase {
           <bool1>0</bool1>
           <bool2>true</bool2>
           <empty></empty>
-          <basicItem>
+          <basicItem id="1234">
             <name>the name of basic item</name>
             <price>99.14</price>
           </basicItem>
@@ -66,13 +66,28 @@ class LazyTypesConversionTests: XCTestCase {
             XCTFail("\(error)")
         }
     }
+
+    func testShouldBeAbleToGetUserInfoDuringDeserialization() {
+        parser = SWXMLHash.config { config in
+            let options = SampleUserInfo(apiVersion: .v1)
+            config.userInfo = [ SampleUserInfo.key: options ]
+        }.parse(xmlWithBasicTypes)
+
+        do {
+            let value: BasicItem = try parser!["root"]["basicItem"].value()
+            XCTAssertEqual(value.name, "the name of basic item (v1)")
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
 }
 
 extension LazyTypesConversionTests {
     static var allTests: [(String, (LazyTypesConversionTests) -> () throws -> Void)] {
         return [
             ("testShouldConvertValueToNonOptional", testShouldConvertValueToNonOptional),
-            ("testShouldConvertAttributeToNonOptional", testShouldConvertAttributeToNonOptional)
+            ("testShouldConvertAttributeToNonOptional", testShouldConvertAttributeToNonOptional),
+            ("testShouldBeAbleToGetUserInfoDuringDeserialization", testShouldBeAbleToGetUserInfoDuringDeserialization)
         ]
     }
 }

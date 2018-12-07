@@ -31,6 +31,29 @@ import XCTest
 // swiftlint:disable line_length
 // swiftlint:disable type_body_length
 
+struct SampleUserInfo {
+    enum ApiVersion {
+        case v1
+        case v2
+    }
+
+    var apiVersion = ApiVersion.v2
+
+    func suffix() -> String {
+        if apiVersion == ApiVersion.v1 {
+            return " (v1)"
+        } else {
+            return ""
+        }
+    }
+
+    static let key = CodingUserInfoKey(rawValue: "test")!
+
+    init(apiVersion: ApiVersion) {
+        self.apiVersion = apiVersion
+    }
+}
+
 class TypeConversionBasicTypesTests: XCTestCase {
     var parser: XMLIndexer?
     let xmlWithBasicTypes = """
@@ -42,7 +65,7 @@ class TypeConversionBasicTypesTests: XCTestCase {
           <bool1>0</bool1>
           <bool2>true</bool2>
           <empty></empty>
-          <basicItem>
+          <basicItem id="1234">
             <name>the name of basic item</name>
             <price>99.14</price>
           </basicItem>
@@ -413,7 +436,7 @@ class TypeConversionBasicTypesTests: XCTestCase {
         XCTAssertEqual(value, true)
     }
 
-    let correctBasicItem = BasicItem(name: "the name of basic item", price: 99.14)
+    let correctBasicItem = BasicItem(name: "the name of basic item", price: 99.14, id: "1234")
 
     func testBasicItemShouldConvertBasicitemToNonOptional() {
         do {
@@ -524,16 +547,38 @@ class TypeConversionBasicTypesTests: XCTestCase {
             XCTFail("\(error)")
         }
     }
+
+    func testShouldBeAbleToGetUserInfoDuringDeserialization() {
+        parser = SWXMLHash.config { config in
+            let options = SampleUserInfo(apiVersion: .v1)
+            config.userInfo = [ SampleUserInfo.key: options ]
+        }.parse(xmlWithBasicTypes)
+
+        do {
+            let value: BasicItem = try parser!["root"]["basicItem"].value()
+            XCTAssertEqual(value.name, "the name of basic item (v1)")
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
 }
 
 struct BasicItem: XMLIndexerDeserializable {
     let name: String
     let price: Double
+    let id: String
 
     static func deserialize(_ node: XMLIndexer) throws -> BasicItem {
+        var name: String = try node["name"].value()
+
+        if let opts = node.userInfo[SampleUserInfo.key] as? SampleUserInfo {
+            name += opts.suffix()
+        }
+
         return try BasicItem(
-            name: node["name"].value(),
-            price: node["price"].value()
+            name: name,
+            price: node["price"].value(),
+            id: node.value(ofAttribute: "id")
         )
     }
 }
@@ -549,6 +594,7 @@ struct AttributeItem: XMLElementDeserializable {
     let price: Double
 
     static func deserialize(_ element: SWXMLHash.XMLElement) throws -> AttributeItem {
+        print("my deserialize")
         return try AttributeItem(
             name: element.value(ofAttribute: "name"),
             price: element.value(ofAttribute: "price")
@@ -618,7 +664,8 @@ extension TypeConversionBasicTypesTests {
             ("testAttributeItemShouldThrowWhenConvertingMissingToNonOptional", testAttributeItemShouldThrowWhenConvertingMissingToNonOptional),
             ("testAttributeItemShouldConvertAttributeItemToOptional", testAttributeItemShouldConvertAttributeItemToOptional),
             ("testAttributeItemShouldConvertEmptyToOptional", testAttributeItemShouldConvertEmptyToOptional),
-            ("testAttributeItemShouldConvertMissingToOptional", testAttributeItemShouldConvertMissingToOptional)
+            ("testAttributeItemShouldConvertMissingToOptional", testAttributeItemShouldConvertMissingToOptional),
+            ("testShouldBeAbleToGetUserInfoDuringDeserialization", testShouldBeAbleToGetUserInfoDuringDeserialization)
         ]
     }
 }
