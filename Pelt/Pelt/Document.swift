@@ -22,8 +22,8 @@ class Document: NSDocument, XMLParserDelegate {
 
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
-        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
         self.addWindowController(windowController)
     }
     
@@ -31,28 +31,33 @@ class Document: NSDocument, XMLParserDelegate {
         return App.instance.theme.serialise().data(using: .utf8)!
     }
     
-    override func read(from data: Data, ofType typeName: String) throws {
-        let xml = SWXMLHash.lazy(data)
+    override func read(from url: URL, ofType typeName: String) throws {
+        
+        let dataString = try String(contentsOf: url, encoding: .utf8)
+        let xml = SWXMLHash.parse(dataString)
+        let ableton = xml["Ableton"]
+        let skinManager = ableton["SkinManager"]
+        
         
         // Ableton Attributes
-        if let majorVersion = xml["Ableton"].element?.attribute(by: "MajorVersion")?.text {
+        if let majorVersion = ableton.element?.attribute(by: "MajorVersion")?.text {
             App.instance.theme.majorVersion = Int(majorVersion)!
         }
-        if let minorVersion = xml["Ableton"].element?.attribute(by: "MinorVersion")?.text {
+        if let minorVersion = ableton.element?.attribute(by: "MinorVersion")?.text {
             App.instance.theme.minorVersion = minorVersion
         }
-        if let schemaChangeCount = xml["Ableton"].element?.attribute(by: "SchemaChangeCount")?.text {
+        if let schemaChangeCount = ableton.element?.attribute(by: "SchemaChangeCount")?.text {
             App.instance.theme.schemaChangeCount = Int(schemaChangeCount)!
         }
-        if let creator = xml["Ableton"].element?.attribute(by: "Creator")?.text {
+        if let creator = ableton.element?.attribute(by: "Creator")?.text {
             App.instance.theme.creator = creator
         }
-        if let revision = xml["Ableton"].element?.attribute(by: "Revision")?.text {
+        if let revision = ableton.element?.attribute(by: "Revision")?.text {
             App.instance.theme.revision = revision
         }
-        
+    
         // Skin Manager
-        _ = xml["Ableton"]["SkinManager"].children.map({ elm in
+       _ = skinManager.children.map({ elm in
             if let element = elm.element {
                 if App.instance.theme.colors[element.name] != nil {
                     setColor(elm)

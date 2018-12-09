@@ -12,8 +12,6 @@
 		D321B2FB1FE3347E00AC865F /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D321B2F91FE3347E00AC865F /* Document.xcdatamodeld */; };
 		D321B2FD1FE3347E00AC865F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D321B2FC1FE3347E00AC865F /* Assets.xcassets */; };
 		D321B3001FE3347E00AC865F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D321B2FE1FE3347E00AC865F /* Main.storyboard */; };
-		D321B30C1FE3347E00AC865F /* PeltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B30B1FE3347E00AC865F /* PeltTests.swift */; };
-		D321B3171FE3347E00AC865F /* PeltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3161FE3347E00AC865F /* PeltUITests.swift */; };
 		D321B32E1FE3354E00AC865F /* AbletonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */; };
 		D321B32F1FE3354E00AC865F /* DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */; };
 		D321B3321FE3355700AC865F /* AbletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321B3301FE3355700AC865F /* AbletonView.swift */; };
@@ -32,23 +30,6 @@
 		D3B1EF511FF37EC700178D83 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B1EF501FF37EC700178D83 /* ItemType.swift */; };
 		D3B3EE911FE7275700456980 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3EE901FE7275700456980 /* Item.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D321B3081FE3347E00AC865F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D321B2E81FE3347E00AC865F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D321B2EF1FE3347E00AC865F;
-			remoteInfo = Pelt;
-		};
-		D321B3131FE3347E00AC865F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D321B2E81FE3347E00AC865F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D321B2EF1FE3347E00AC865F;
-			remoteInfo = Pelt;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D3B1EF451FF3564900178D83 /* Embed Frameworks */ = {
@@ -73,12 +54,6 @@
 		D321B2FF1FE3347E00AC865F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D321B3011FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D321B3021FE3347E00AC865F /* Pelt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pelt.entitlements; sourceTree = "<group>"; };
-		D321B3071FE3347E00AC865F /* PeltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D321B30B1FE3347E00AC865F /* PeltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltTests.swift; sourceTree = "<group>"; };
-		D321B30D1FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D321B3121FE3347E00AC865F /* PeltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D321B3161FE3347E00AC865F /* PeltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeltUITests.swift; sourceTree = "<group>"; };
-		D321B3181FE3347E00AC865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D321B32C1FE3354E00AC865F /* AbletonViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonViewDataSource.swift; sourceTree = "<group>"; };
 		D321B32D1FE3354E00AC865F /* DataModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelDelegate.swift; sourceTree = "<group>"; };
 		D321B3301FE3355700AC865F /* AbletonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbletonView.swift; sourceTree = "<group>"; };
@@ -106,20 +81,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D321B3041FE3347E00AC865F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D321B30F1FE3347E00AC865F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,8 +89,6 @@
 			children = (
 				D3B1EF4C1FF3585200178D83 /* SWXMLHash.framework */,
 				D321B2F21FE3347E00AC865F /* Pelt */,
-				D321B30A1FE3347E00AC865F /* PeltTests */,
-				D321B3151FE3347E00AC865F /* PeltUITests */,
 				D321B2F11FE3347E00AC865F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				D321B2F01FE3347E00AC865F /* Pelt.app */,
-				D321B3071FE3347E00AC865F /* PeltTests.xctest */,
-				D321B3121FE3347E00AC865F /* PeltUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,24 +120,6 @@
 				D321B33A1FE33B2900AC865F /* App.swift */,
 			);
 			path = Pelt;
-			sourceTree = "<group>";
-		};
-		D321B30A1FE3347E00AC865F /* PeltTests */ = {
-			isa = PBXGroup;
-			children = (
-				D321B30B1FE3347E00AC865F /* PeltTests.swift */,
-				D321B30D1FE3347E00AC865F /* Info.plist */,
-			);
-			path = PeltTests;
-			sourceTree = "<group>";
-		};
-		D321B3151FE3347E00AC865F /* PeltUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D321B3161FE3347E00AC865F /* PeltUITests.swift */,
-				D321B3181FE3347E00AC865F /* Info.plist */,
-			);
-			path = PeltUITests;
 			sourceTree = "<group>";
 		};
 		D321B32A1FE334F600AC865F /* Controllers */ = {
@@ -260,42 +199,6 @@
 			productReference = D321B2F01FE3347E00AC865F /* Pelt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D321B3061FE3347E00AC865F /* PeltTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D321B31E1FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltTests" */;
-			buildPhases = (
-				D321B3031FE3347E00AC865F /* Sources */,
-				D321B3041FE3347E00AC865F /* Frameworks */,
-				D321B3051FE3347E00AC865F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D321B3091FE3347E00AC865F /* PBXTargetDependency */,
-			);
-			name = PeltTests;
-			productName = PeltTests;
-			productReference = D321B3071FE3347E00AC865F /* PeltTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D321B3111FE3347E00AC865F /* PeltUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D321B3211FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltUITests" */;
-			buildPhases = (
-				D321B30E1FE3347E00AC865F /* Sources */,
-				D321B30F1FE3347E00AC865F /* Frameworks */,
-				D321B3101FE3347E00AC865F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D321B3141FE3347E00AC865F /* PBXTargetDependency */,
-			);
-			name = PeltUITests;
-			productName = PeltUITests;
-			productReference = D321B3121FE3347E00AC865F /* PeltUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -303,22 +206,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Brian Williams";
 				TargetAttributes = {
 					D321B2EF1FE3347E00AC865F = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
-					};
-					D321B3061FE3347E00AC865F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D321B2EF1FE3347E00AC865F;
-					};
-					D321B3111FE3347E00AC865F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D321B2EF1FE3347E00AC865F;
 					};
 				};
 			};
@@ -336,8 +230,6 @@
 			projectRoot = "";
 			targets = (
 				D321B2EF1FE3347E00AC865F /* Pelt */,
-				D321B3061FE3347E00AC865F /* PeltTests */,
-				D321B3111FE3347E00AC865F /* PeltUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -349,20 +241,6 @@
 			files = (
 				D321B2FD1FE3347E00AC865F /* Assets.xcassets in Resources */,
 				D321B3001FE3347E00AC865F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D321B3051FE3347E00AC865F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D321B3101FE3347E00AC865F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,36 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D321B3031FE3347E00AC865F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D321B30C1FE3347E00AC865F /* PeltTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D321B30E1FE3347E00AC865F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D321B3171FE3347E00AC865F /* PeltUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D321B3091FE3347E00AC865F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D321B2EF1FE3347E00AC865F /* Pelt */;
-			targetProxy = D321B3081FE3347E00AC865F /* PBXContainerItemProxy */;
-		};
-		D321B3141FE3347E00AC865F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D321B2EF1FE3347E00AC865F /* Pelt */;
-			targetProxy = D321B3131FE3347E00AC865F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D321B2FE1FE3347E00AC865F /* Main.storyboard */ = {
@@ -451,6 +300,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -458,6 +308,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -513,6 +364,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -520,6 +372,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -568,7 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.Pelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -587,73 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.Pelt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		D321B31F1FE3347E00AC865F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B4MRNC88BC;
-				INFOPLIST_FILE = PeltTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pelt.app/Contents/MacOS/Pelt";
-			};
-			name = Debug;
-		};
-		D321B3201FE3347E00AC865F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B4MRNC88BC;
-				INFOPLIST_FILE = PeltTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pelt.app/Contents/MacOS/Pelt";
-			};
-			name = Release;
-		};
-		D321B3221FE3347E00AC865F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B4MRNC88BC;
-				INFOPLIST_FILE = PeltUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = Pelt;
-			};
-			name = Debug;
-		};
-		D321B3231FE3347E00AC865F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B4MRNC88BC;
-				INFOPLIST_FILE = PeltUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iko.eviathan.PeltUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = Pelt;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -674,24 +461,6 @@
 			buildConfigurations = (
 				D321B31C1FE3347E00AC865F /* Debug */,
 				D321B31D1FE3347E00AC865F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D321B31E1FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D321B31F1FE3347E00AC865F /* Debug */,
-				D321B3201FE3347E00AC865F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D321B3211FE3347E00AC865F /* Build configuration list for PBXNativeTarget "PeltUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D321B3221FE3347E00AC865F /* Debug */,
-				D321B3231FE3347E00AC865F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
